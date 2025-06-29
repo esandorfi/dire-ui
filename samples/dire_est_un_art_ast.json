@@ -1,0 +1,285 @@
+{
+  "type": "document",
+  "title": "DIRE EST UN ART - Catalogue de formations",
+  "metadata": {
+    "author": "NATHALIE PINOT",
+    "organization": "DIRE EST UN ART",
+    "address": "54 RUE DE LA GRANGE AUX MOINES, 79400 ST MAIXENT L'ECOLE",
+    "siret": "90126767400025",
+    "ape": "8559B",
+    "organism_type": "ORGANISME DE FORMATION",
+    "formation_number": "DA n°75790151879",
+    "website": "www.dire-estunart.com",
+    "contact": {
+      "phone": "06.63.96.39.10",
+      "email": "np@dire-estunart.com"
+    }
+  },
+  "children": [
+    {
+      "type": "header_quote",
+      "content": {
+        "quote": "COMME LES LETTRES DANS LES MOTS NOUS SOMMES DES PETITES PARTS D'UNE PHRASE QUI NE FINIT PAS.",
+        "author": "Henri Meschonnic"
+      }
+    },
+    {
+      "type": "philosophy_statement",
+      "content": [
+        "La parole est un outil, l'un des plus simples et l'un des plus complexes que nous ayons pour communiquer.",
+        "Provoquer l'éloquence dans la sphère publique, c'est conjuguer écoute, efficacité et éthique.",
+        "Aujourd'hui l'art de s'exprimer est un enjeu vital."
+      ]
+    },
+    {
+      "type": "main_offer",
+      "title": "VOUS PROPOSE DE TRAVAILLER LA PAROLE DANS TOUS SES ÉTATS OÙ LA CRÉATIVITÉ A SON MOT À DIRE AVEC",
+      "formations_count": "4 formations"
+    },
+    {
+      "type": "formations_list",
+      "children": [
+        {
+          "type": "formation",
+          "category": "FORMATION",
+          "id": "le_livre_en_scene",
+          "title": "LE LIVRE EN SCÈNE",
+          "introduction": "Lire à haute voix c'est faire entendre la littérature et partager un moment d'intimité avec un public. Comment se mouvoir dans la matière des mots d'un auteur, articuler, laisser résonner tout en engageant le corps du lecteur dans un espace scénique.",
+          "objectifs": {
+            "title": "OBJECTIFS",
+            "items": [
+              "Connaître les outils qui permettent de fabriquer une lecture en scène",
+              "Percevoir les enjeux d'une lecture à haute voix"
+            ]
+          },
+          "programme": {
+            "title": "PROGRAMME",
+            "sections": [
+              {
+                "title": "La pratique corporelle et vocale",
+                "items": [
+                  "Travail sur la respiration, l'utilisation de la voix, la diction, le regard, l'écoute et la présence",
+                  "Travailler la résonance des mots et les déplacements",
+                  "La posture du lecteur : devant un pupitre, assis, texte en main, en chœur…"
+                ]
+              },
+              {
+                "title": "La lecture d'un texte : de l'écriture d'un auteur à la voix d'un lecteur",
+                "items": [
+                  "L'architecture du texte : le travail à la table",
+                  "Le souffle d'une écriture : son rythme, ses silences...",
+                  "Le rôle de l'imaginaire dans une lecture",
+                  "Comment écouter un auteur et faire des choix dans ce que l'on souhaite transmettre du texte",
+                  "Mises en situation en solo, en duo et en chœur"
+                ]
+              },
+              {
+                "title": "La lecture en scène",
+                "items": [
+                  "Réfléchir sur ce que signifie «une bonne lecture»",
+                  "La répétition comme outil de travail",
+                  "L'espace, l'adresse au public et l'engagement du lecteur"
+                ]
+              }
+            ]
+          },
+          "public": {
+            "title": "PUBLIC :",
+            "description": "La formation est ouverte à tous les acteurs du livre : bibliothécaires, auteurs, comédiens, traducteurs..."
+          }
+        },
+        {
+          "type": "formation",
+          "category": "FORMATION",
+          "id": "ecrire_pour_dire",
+          "title": "ÉCRIRE POUR DIRE",
+          "introduction": "Ecrire est un processus en mouvement. Un discours improvisé a été réécrit trois fois nous dit Winston Churchill. Elaborer un texte ayant pour vocation d'être dit est un véritable exercice d'équilibre qui permet de gagner en aisance et en clarté.",
+          "objectifs": {
+            "title": "OBJECTIFS",
+            "items": [
+              "Ecrire pour clarifier et architecturer des pensées autour d'un sujet ou d'une thématique",
+              "Construire et animer une présentation orale pour provoquer l'interactivité de son public"
+            ]
+          },
+          "programme": {
+            "title": "PROGRAMME",
+            "sections": [
+              {
+                "title": "Ecriture et oralité",
+                "items": [
+                  "Expérimenter différents outils d'écriture pour favoriser le processus d'expression créative",
+                  "Les styles d'écriture : nouvelle, slam, récit de voyage...",
+                  "Travail sur la diction, la musicalité des mots et la respiration du texte",
+                  "S'entraîner à écrire pour s'entraîner à parler : clarté - concision - rythmicité - précision"
+                ]
+              },
+              {
+                "title": "Les piliers du discours",
+                "items": [
+                  "Argumenter, négocier, émouvoir, convaincre et fédérer",
+                  "Comment mettre un discours en scène : travailler un positionnement et défendre les idées avec souplesse",
+                  "Créer un espace d'écoute mutuelle",
+                  "La répétition : un outil pour gagner en aisance"
+                ]
+              },
+              {
+                "title": "Dire un discours avec éloquence face à un public",
+                "items": [
+                  "Donner sa parole avec naturel, clarté et plaisir en provoquant l'adhésion et l'intéraction de son public"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "formation",
+          "category": "FORMATION",
+          "id": "parler_en_public",
+          "title": "PARLER EN PUBLIC",
+          "introduction": "C'est savoir tenir un propos, émouvoir et susciter la participation d'un auditoire. Prendre la parole c'est approfondir les fondamentaux de la communication en prenant appui sur qui nous sommes. C'est questionner l'écoute, la confiance et la créativité.",
+          "objectifs": {
+            "title": "OBJECTIFS",
+            "items": [
+              "Explorer sa façon «d'être» sous le regard des autres",
+              "Relier l'instrument (le corps), la partition (les mots à dire) et l'instrumentiste (la personne)"
+            ]
+          },
+          "programme": {
+            "title": "PROGRAMME",
+            "sections": [
+              {
+                "title": "La technique corporelle et vocale",
+                "items": [
+                  "Travail sur le souffle, l'utilisation de la voix, la diction, le regard, l'écoute et la présence",
+                  "Les déplacements et la relation à l'espace"
+                ]
+              },
+              {
+                "title": "Comment s'exprimer avec éloquence",
+                "items": [
+                  "Identifier les différentes situations de communication verbale et non verbale",
+                  "Jouer avec les émotions pour nourrir sa parole",
+                  "Comment être en relation avec soi et avec l'autre",
+                  "S'engager physiquement et mentalement pour donner un rythme aux mots et convoquer l'imaginaire",
+                  "Adapter l'expressivité, la gestuelle et les tonalités de sa voix pour capter l'attention de son auditeur et de son auditoire"
+                ]
+              },
+              {
+                "title": "La singularité comme atout pour construire son image de diseur et gagner en sérénité",
+                "items": [
+                  "S'entraîner à écrire pour s'entraîner à parler",
+                  "Savoir déjouer les sources du trac",
+                  "Devenir acteur d'une parole claire, généreuse et concise à la fois"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "formation",
+          "category": "FORMATION",
+          "id": "manager_cest_dabord_communiquer",
+          "title": "MANAGER C'EST D'ABORD COMMUNIQUER",
+          "introduction": "Informer, mobiliser, motiver, recadrer... un manager passe la majeure partie de son temps à communiquer. Comment gagner en charisme pour améliorer la communication, optimiser les négociations ou les prises de décisions au sein d'une structure.",
+          "objectifs": {
+            "title": "OBJECTIFS",
+            "items": [
+              "Approfondir les différents langages comme source émotionnelle et d'intelligence collective",
+              "Clarifier sa posture, ses arguments et sa stratégie de manager face à une équipe et une direction"
+            ]
+          },
+          "programme": {
+            "title": "PROGRAMME",
+            "sections": [
+              {
+                "title": "Faire un diagnostic des situations managériales",
+                "items": [
+                  "Identifier et analyser les situations de communication du manager et les difficultés rencontrées",
+                  "Ajuster la communication sur son projet et sa vision",
+                  "Tirer profit des différentes facettes de sa personnalité",
+                  "Améliorer ses axes de communication et clarifier son identité managériale",
+                  "Maîtriser les techniques d'écoute et de reformulation"
+                ]
+              },
+              {
+                "title": "Renforcer ses qualités de communicant",
+                "items": [
+                  "Connaître les stratégies de résolution des conflits et favoriser l'approche collaborative",
+                  "Construire un positionnement et un discours impactant et différenciant"
+                ]
+              },
+              {
+                "title": "Construire des relations sereines et constructives",
+                "items": [
+                  "Respecter le cadre professionnel et l'enjeu social",
+                  "Conjuguer performance et bien-être dans sa vie professionnelle",
+                  "Considérer la spirale évolutive du temps pour piloter un changement de façon pérenne"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "author_profile",
+      "content": "J'ai choisi les mots comme ligne de conduite et fonde DIRE EST UN ART après un parcours atypique dans les arts de la parole. Depuis 20 ans, j'accompagne tous les publics dans leur désir de mieux communiquer. J'enseigne les techniques de l'éloquence à l'Université d'Avignon depuis 2009, interviens pour le CNFPT et anime des masterclass. Originaire de Franche-Comté, j'ai bifurqué à Arles en 2003 et aujourd'hui me déplace au gré des formations depuis Saint-Maixent L'École.",
+      "signature": "Nathalie Pinot"
+    },
+    {
+      "type": "formation_details_missing",
+      "note": "PUBLIC : Les formations ECRIRE, PARLER, MANAGER sont [texte partiellement visible/coupé dans le document] souhaitant mieux communiquer dans la sphère professionnelle. Conditions de participation : aucun prérequis"
+    },
+    {
+      "type": "pedagogie_section",
+      "title": "LA PÉDAGOGIE :",
+      "content": "La formation se construit dans la réflexion, l'écoute et la pratique alternant apports théoriques et mises en situation. Chaque journée se déroule avec un training corporel et vocal, des études de cas, des exercices liés à la pratique théâtrale et à l'écriture. La formation permet d'intégrer différents outils de communication dans la vie professionnelle des participants. Un regard attentif est porté sur l'engagement de chacun tout au long de la session."
+    },
+    {
+      "type": "modalites_formations",
+      "title": "MODALITÉS DES FORMATIONS",
+      "details": {
+        "public": {
+          "title": "PUBLIC :",
+          "content": "Les formations ECRIRE, PARLER, MANAGER sont ouvertes à toute personne souhaitant mieux communiquer dans la sphère professionnelle. Conditions de participation : aucun prérequis"
+        },
+        "pedagogie": {
+          "title": "LA PÉDAGOGIE :",
+          "content": "La formation se construit dans la réflexion, l'écoute et la pratique alternant apports théoriques et mises en situation. Chaque journée se déroule avec un training corporel et vocal, des études de cas, des exercices liés à la pratique théâtrale et à l'écriture. La formation permet d'intégrer différents outils de communication dans la vie professionnelle des participants. Un regard attentif est porté sur l'engagement de chacun tout au long de la session."
+        },
+        "groupe": {
+          "title": "GROUPE :",
+          "content": "DE 2 À 14 PARTICIPANTS"
+        },
+        "duree": {
+          "title": "DURÉE :",
+          "content": "DE 2 À 3 JOURS (14H OU 21H)"
+        },
+        "session": {
+          "title": "SESSION :",
+          "content": "EN INTRA ENTREPRISE La formation choisie est accueillie par la structure communautaire et l'organisation selon ses souhaits."
+        }
+      }
+    },
+    {
+      "type": "footer_info",
+      "content": {
+        "legal_footer": "NATHALIE PINOT - DIRE EST UN ART, 54 RUE DE LA GRANGE AUX MOINES, 79400 ST MAIXENT L'ECOLE SIRET: 90126767400025, APE : 8559B, ORGANISME DE FORMATION - DA n°75790151879",
+        "website": "www.dire-estunart.com"
+      }
+    },
+    {
+      "type": "partners_logos",
+      "partners": [
+        "Médiathèque Boris Vian",
+        "Musée Angladon centre européen de poésie d'Avignon",
+        "AVIGNON FESTIVAL",
+        "Théâtre des Doms ARTS"
+      ]
+    },
+    {
+      "type": "call_to_action",
+      "content": "DEVIS SUR DEMANDE"
+    }
+  ]
+}
