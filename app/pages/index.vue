@@ -30,6 +30,13 @@
       />
       
       <UButton
+        label="AST Grid"
+       color="neutral"
+        variant="outline"
+        icon="i-lucide-grid"
+        to="/astgrid"
+      />
+      <UButton
         label="Welcome"
        color="neutral"
         variant="outline"
@@ -37,11 +44,11 @@
         to="/welcome"
       />
       <UButton
-        label="AST Grid"
+        label="Welcome2"
        color="neutral"
         variant="outline"
-        icon="i-lucide-grid"
-        to="/astgrid"
+        icon="i-lucide-warehouse"
+        to="/welcome2"
       />
     </div>
   </div>

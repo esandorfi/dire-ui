@@ -72,8 +72,8 @@
 
 <script setup lang="ts">
 import { computed, onMounted } from 'vue';
-// Import the function directly without destructuring
-import useAstTypes from '../domains/catalogue/composables/useAstTypes';
+// Import the function directly without destructuring and also import the AstTypeInfo type
+import useAstTypes, { type AstTypeInfo } from '../domains/catalogue/composables/useAstTypes';
 
 // Use the AST types composable
 const { 
