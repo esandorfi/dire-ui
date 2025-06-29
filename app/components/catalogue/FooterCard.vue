@@ -1,5 +1,5 @@
 <template>
-  <UCard variant="subtle">
+  <CardBase type="footer">
     <div class="footer-content">
       <div class="legal-text">
         <p>{{ footer.legalText }}</p>
@@ -22,11 +22,12 @@
         <button class="btn btn-lg btn-primary">{{ footer.callToAction }}</button>
       </div>
     </div>
-  </UCard>
+  </CardBase>
 </template>
 
 <script setup lang="ts">
 import type { FooterCard } from '../../domains/catalogue/schemas/card.schema';
+import CardBase from './ui/CardBase.vue';
 
 defineProps({
   footer: {

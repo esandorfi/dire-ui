@@ -1,16 +1,17 @@
 <template>
-  <UCard variant="subtle">
+  <CardBase type="profile">
     <div class="profile-content">
       <p class="profile-text">{{ profile.content }}</p>
       <div class="profile-signature">
         <p>{{ profile.signature }}</p>
       </div>
     </div>
-  </UCard>
+  </CardBase>
 </template>
 
 <script setup lang="ts">
 import type { ProfileCard } from '../../domains/catalogue/schemas/card.schema';
+import CardBase from './ui/CardBase.vue';
 
 defineProps({
   profile: {

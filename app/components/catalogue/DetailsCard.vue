@@ -1,19 +1,17 @@
 <template>
-  <UCard variant="subtle">
-    <template #header>
-      <h3>{{ details.title }}</h3>
-    </template>
+  <CardBase :title="details.title" type="details">
     <div class="details-content">
       <div v-for="(section, index) in details.sections" :key="`section-${index}`" class="details-section">
         <h4 class="section-title">{{ section.title }}</h4>
         <p class="section-content">{{ section.content }}</p>
       </div>
     </div>
-  </UCard>
+  </CardBase>
 </template>
 
 <script setup lang="ts">
 import type { DetailsCard } from '../../domains/catalogue/schemas/card.schema';
+import CardBase from './ui/CardBase.vue';
 
 defineProps({
   details: {

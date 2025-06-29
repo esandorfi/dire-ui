@@ -1,5 +1,5 @@
 <template>
-  <UCard variant="subtle">
+  <CardBase type="header">
     <div class="header-content">
       <blockquote class="header-quote">
         <p>{{ header.quote }}</p>
@@ -8,11 +8,12 @@
         </footer>
       </blockquote>
     </div>
-  </UCard>
+  </CardBase>
 </template>
 
 <script setup lang="ts">
 import type { HeaderCard } from '../../domains/catalogue/schemas/card.schema';
+import CardBase from './ui/CardBase.vue';
 
 defineProps({
   header: {

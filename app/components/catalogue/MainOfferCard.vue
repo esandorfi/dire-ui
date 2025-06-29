@@ -1,16 +1,17 @@
 <template>
-  <UCard variant="subtle">
+  <CardBase type="main_offer">
     <div class="main-offer-content">
       <h2 class="main-offer-title">{{ mainOffer.title }}</h2>
       <div class="formations-count">
         <UBadge color="primary" size="lg">{{ mainOffer.formationsCount }}</UBadge>
       </div>
     </div>
-  </UCard>
+  </CardBase>
 </template>
 
 <script setup lang="ts">
 import type { MainOfferCard } from '../../domains/catalogue/schemas/card.schema';
+import CardBase from './ui/CardBase.vue';
 
 defineProps({
   mainOffer: {

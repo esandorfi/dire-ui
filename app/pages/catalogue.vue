@@ -2,7 +2,6 @@
   <div class="catalogue-page">
     <UContainer>
       <div v-if="isLoading" class="loading-state">
-        <ULoader size="lg" />
         <p>Chargement du catalogue...</p>
       </div>
       

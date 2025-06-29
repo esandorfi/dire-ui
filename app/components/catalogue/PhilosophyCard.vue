@@ -1,5 +1,5 @@
 <template>
-  <UCard variant="subtle">
+  <CardBase type="philosophy">
     <div class="philosophy-content">
       <div class="philosophy-statements">
         <p v-for="(statement, index) in philosophy.statements" :key="`statement-${index}`" class="statement">
@@ -7,11 +7,12 @@
         </p>
       </div>
     </div>
-  </UCard>
+  </CardBase>
 </template>
 
 <script setup lang="ts">
 import type { PhilosophyCard } from '../../domains/catalogue/schemas/card.schema';
+import CardBase from './ui/CardBase.vue';
 
 
 defineProps({

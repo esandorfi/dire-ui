@@ -20,6 +20,22 @@
         to="https://github.com/nuxt/ui"
         target="_blank"
       />
+      
+      <UButton
+        label="Catalogue"
+       color="neutral"
+        variant="outline"
+        icon="i-lucide-book-open"
+        to="/catalogue"
+      />
+      
+      <UButton
+        label="Welcome"
+       color="neutral"
+        variant="outline"
+        icon="i-lucide-warehouse"
+        to="/welcome"
+      />
     </div>
   </div>
 </template>

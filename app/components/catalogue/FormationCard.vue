@@ -1,8 +1,5 @@
 <template>
-  <UCard variant="subtle">
-    <template #header>
-      <h3>{{ formation.title }}</h3>
-    </template>
+  <CardBase :title="formation.title" type="formation">
     <div class="formation-content">
       <UBadge color="primary" class="formation-category">{{ formation.category }}</UBadge>
       
@@ -34,11 +31,12 @@
         <p>{{ formation.publicDescription }}</p>
       </div>
     </div>
-  </UCard>
+  </CardBase>
 </template>
 
 <script setup lang="ts">
 import type { FormationCard } from '../../domains/catalogue/schemas/card.schema';
+import CardBase from './ui/CardBase.vue';
 
 defineProps({
   formation: {
