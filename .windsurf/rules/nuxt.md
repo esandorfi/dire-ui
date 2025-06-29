@@ -7,7 +7,7 @@ trigger: always_on
 ## Project Structure Rules
 
 ### Domain Organization
-- Each business domain (user, product, order) must be in its own folder under `src/domains/`
+- Each business domain (user, product, order) must be in its own folder under `app/domains/`
 - Domain folders must contain exactly these subfolders: `datasets/`, `schemas/`, `services/`, `composables/`
 - Never mix domains - user logic stays in user folder, product logic in product folder
 - Domain names should be singular (user, product, order) not plural
@@ -50,7 +50,7 @@ trigger: always_on
 - Composables should handle loading states, errors, and UI concerns
 - Composables should not contain business logic
 
-## Page Rules (`src/pages/`)
+## Page Rules (`app/pages/`)
 - Pages should only orchestrate between domains via composables
 - Pages should not contain business logic
 - Pages should not call services directly
@@ -59,7 +59,7 @@ trigger: always_on
 - Pages pass data to components via props
 - Pages should be focused on user experience flow
 
-## Component Rules (`src/components/`)
+## Component Rules (`app/components/`)
 - Components should be organized by domain (user/, product/, order/)
 - Components should be pure UI - no business logic
 - Components should receive all data via props
@@ -67,7 +67,7 @@ trigger: always_on
 - Components should not use domain composables directly
 - UI components (button, input) go in `ui/` folder
 
-## Shared Rules (`src/shared/`)
+## Shared Rules (`app/shared/`)
 - Only put truly shared utilities here
 - No domain-specific logic in shared
 - API clients, common types, utilities only
