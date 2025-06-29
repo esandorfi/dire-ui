@@ -36,6 +36,13 @@
         icon="i-lucide-warehouse"
         to="/welcome"
       />
+      <UButton
+        label="AST Grid"
+       color="neutral"
+        variant="outline"
+        icon="i-lucide-grid"
+        to="/astgrid"
+      />
     </div>
   </div>
 </template>
