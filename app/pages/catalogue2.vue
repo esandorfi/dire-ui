@@ -4,26 +4,27 @@
       <UContainer class="section-lr">
         <UHeader
           :toggle="{
-            color: 'primary',
-            variant: 'subtle',
+            color: 'secondary',
+
             class: 'rounded-full',
           }"
+          class="border-none"
         >
           <template #title>
-            <Logo class="h-6 w-auto" />
+            <div class="text-lg sm:text-2xl">
+              dire <span class="text-orange-800">est</span> un art
+            </div>
           </template>
 
-          <UNavigationMenu :items="navitems" />
+          <UNavigationMenu :items="navitems" class="-mx-2.5" />
 
           <template #right>
-            <UColorModeButton />
-
             <UButton
-              color="neutral"
+              color="secondary"
               label="Prendre un rendez-vous"
-              variant="ghost"
               to="/rdv"
               aria-label="rdv"
+              class="font-bold rounded-full text-base sm:text-xl"
             />
           </template>
 
@@ -40,12 +41,25 @@
 
     <UPageHero
       class="section-b"
-      :ui="{ container: 'section-lr' }"
-      title="Ultimate Vue UI library"
-      description="A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications."
-      headline="New release"
-      :links="herolinks"
-    />
+      :ui="{
+        container: 'section-lr py-10 sm:py-16 lg:py-30 waves-bg',
+        title: 'max-w-5xl mx-auto',
+        description: 'sm:text-xl/6',
+        headline: 'text-gray-900 font-bold',
+      }"
+    >
+      <template #headline> LES 4 FORMATIONS </template>
+      <template #title>
+        Aujourd'hui, <i class="text-orange-800">l'art de s'exprimer</i> est un
+        enjeu vital.
+      </template>
+      <template #description>
+        Nathalie Pinot vous propose de travailler la parole dans tous ses états
+        avec la créativité comme moteur de recherche. La parole est un outil,
+        l'un des plus simples et l'un des plus complexes que nous ayons pour
+        communiquer.
+      </template>
+    </UPageHero>
   </div>
 </template>
 
@@ -55,36 +69,18 @@ import type { NavigationMenuItem } from "@nuxt/ui";
 const navitems = ref<NavigationMenuItem[][]>([
   [
     {
-      label: "Guide",
-      icon: "i-lucide-book-open",
+      icon: "i-lucide-square-play",
+      label: "Méthode",
+      to: "/components",
+    },
+    {
+      label: "Formations",
       to: "/getting-started",
     },
     {
-      label: "Composables",
-      icon: "i-lucide-database",
+      label: "Offre",
       to: "/composables",
     },
-    {
-      label: "Components",
-      icon: "i-lucide-box",
-      to: "/components",
-      active: true,
-    },
   ],
-]);
-
-const herolinks = ref([
-  {
-    label: "Get started",
-    to: "/getting-started",
-    icon: "i-lucide-square-play",
-  },
-  {
-    label: "Learn more",
-    to: "/getting-started/theme",
-    color: "neutral",
-    variant: "subtle",
-    trailingIcon: "i-lucide-arrow-right",
-  },
 ]);
 </script>
