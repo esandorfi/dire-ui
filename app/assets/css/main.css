@@ -1,6 +1,6 @@
+@import "https://api.fontshare.com/v2/css?f[]=satoshi@500,700&display=swap";
 @import "tailwindcss";
 @import "@nuxt/ui-pro";
-@import "https://api.fontshare.com/v2/css?f[]=satoshi@500,700&display=swap";
 
 @theme static {
   --font-sans: "Satoshi", sans-serif;
@@ -14,6 +14,10 @@
 
 .section-b {
   border-bottom: 1px solid var(--border-color);
+}
+
+.section-b-dashed {
+  border-bottom: 2px dashed var(--border-color);
 }
 
 .section-lr {
@@ -31,4 +35,32 @@
   background-position: top right;
   /* center; */
   background-repeat: no-repeat;
+}
+
+/* Section Number */
+.section-number {
+  text-align: center;
+
+  letter-spacing: -0.3px;
+  pointer-events: none;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  font-family:
+    IBM Plex Mono,
+    monospace;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  display: flex;
+
+  border-bottom: 1px solid #4f4f4f;
+  border-left: 1px solid #4f4f4f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%);
 }
