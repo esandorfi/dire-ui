@@ -28,6 +28,15 @@
         icon="i-lucide-book-open"
         to="/catalogue"
       />
+
+            
+      <UButton
+        label="Catalogue2"
+       color="neutral"
+        variant="outline"
+        icon="i-lucide-book-open"
+        to="/catalogue2"
+      />
       
       <UButton
         label="AST Grid"

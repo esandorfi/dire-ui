@@ -1,5 +1,6 @@
 import { ref, computed } from 'vue';
-import { CatalogueSchema, type Catalogue, type Node } from '../schemas/catalogue.schema';
+import { CatalogueSchema   } from '../schemas/catalogue.schema';
+import type {Catalogue, Node} from '../schemas/catalogue.schema';
 
 /**
  * Type definition for AST node type information

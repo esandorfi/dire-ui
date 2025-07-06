@@ -1,5 +1,6 @@
 import { ref, computed } from 'vue';
-import { CatalogueSchema, type Catalogue } from '../schemas/catalogue.schema';
+import { CatalogueSchema  } from '../schemas/catalogue.schema';
+import type {Catalogue} from '../schemas/catalogue.schema';
 import type { CardCollection } from '../schemas/card.schema';
 import { CardTransformerService } from '../services/card-transformer.service';
 
