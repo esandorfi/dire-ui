@@ -37,6 +37,18 @@
   background-repeat: no-repeat;
 }
 
+@media (max-width: 640px) {
+  .waves-bg {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+      url("/images/waves-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    /* center; */
+    background-repeat: no-repeat;
+  }
+}
+
 /* Section Number */
 .section-number {
   text-align: center;

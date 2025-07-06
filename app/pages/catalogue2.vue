@@ -7,7 +7,7 @@
         :ui="{
           container: 'section-lr py-10 sm:py-16 lg:py-30 waves-bg',
           title: 'max-w-5xl mx-auto',
-          description: 'sm:text-xl/6',
+          description: 'text-lg/5 sm:text-xl/6 text-gray-900',
           headline: 'text-gray-900 font-bold',
         }"
       >
@@ -25,26 +25,29 @@
         </template>
 
         <template #footer>
-          <UPageGrid class="lg:grid-cols-4">
+          <UPageGrid class="lg:grid-cols-2">
             <UPageCard
-              v-for="(card, index) in formationCards"
+              v-for="(card, index) in heroFormationCards"
               :key="index"
               v-bind="card"
               variant="outline"
               :to="`#${card.id}`"
-              :ui="{ footer: 'text-right text-xs absolute right-2 bottom-2' }"
+              :ui="{
+                footer: 'text-right text-xs absolute right-2 bottom-2',
+                body: 'w-full',
+              }"
             >
               <template #title>
                 <div class="text-xs font-bold text-orange-800 pb-2">
                   FORMATION
 
-                  <div class="text-xs">
+                  <span class="text-xs">
                     {{
                       card.id == "formation-3-0"
                         ? "ACTEURS DU LIVRE"
                         : "COMMUNICATION"
                     }}
-                  </div>
+                  </span>
                 </div>
                 <div class="text-2xl/6 font-bold text-gray-600">
                   {{ card.title }}
@@ -125,10 +128,23 @@ const desiredOrder = [
   "formation-3-0",
 ];
 
+const heroOrder = [
+  "formation-3-0",
+  "formation-3-2",
+  "formation-3-1",
+  "formation-3-3",
+];
+
 const orderedFormationCards = computed(() =>
   formationCards.value
     .slice()
     .sort((a, b) => desiredOrder.indexOf(a.id) - desiredOrder.indexOf(b.id)),
+);
+
+const heroFormationCards = computed(() =>
+  formationCards.value
+    .slice()
+    .sort((a, b) => heroOrder.indexOf(a.id) - heroOrder.indexOf(b.id)),
 );
 
 // Example: get a specific card by ID (if needed)
