@@ -10,14 +10,14 @@
 </template>
 
 <script setup lang="ts">
-import type { ProfileCard } from '../../domains/catalogue/schemas/card.schema';
-import CardBase from './ui/CardBase.vue';
+import type { ProfileCard } from "../../domains/catalogue/schemas/card.schema";
+import CardBase from "./ui/CardBase.vue";
 
 defineProps({
   profile: {
     type: Object as () => ProfileCard,
-    required: true
-  }
+    required: true,
+  },
 });
 </script>
 

@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-import WelcomeHorizontal from '../components/landing/WelcomeHorizontal.vue';
+import WelcomeHorizontal from "../components/landing/WelcomeHorizontal.vue";
 </script>

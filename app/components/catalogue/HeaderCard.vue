@@ -12,14 +12,14 @@
 </template>
 
 <script setup lang="ts">
-import type { HeaderCard } from '../../domains/catalogue/schemas/card.schema';
-import CardBase from './ui/CardBase.vue';
+import type { HeaderCard } from "../../domains/catalogue/schemas/card.schema";
+import CardBase from "./ui/CardBase.vue";
 
 defineProps({
   header: {
     type: Object as () => HeaderCard,
-    required: true
-  }
+    required: true,
+  },
 });
 </script>
 

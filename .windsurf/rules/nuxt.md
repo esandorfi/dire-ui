@@ -7,12 +7,14 @@ trigger: always_on
 ## Project Structure Rules
 
 ### Domain Organization
+
 - Each business domain (user, product, order) must be in its own folder under `app/domains/`
 - Domain folders must contain exactly these subfolders: `datasets/`, `schemas/`, `services/`, `composables/`
 - Never mix domains - user logic stays in user folder, product logic in product folder
 - Domain names should be singular (user, product, order) not plural
 
 ### Dataset Layer Rules (`domains/*/datasets/`)
+
 - Store static data files used by services: JSON, CSV, YAML files
 - Datasets are domain-specific and should not be shared across domains
 - Files should be read-only reference data, not user-generated content
@@ -23,6 +25,7 @@ trigger: always_on
 - Use for: user roles, product categories, pricing tables, shipping rates, etc.
 
 ### Schema Layer Rules (`domains/*/schemas/`)
+
 - All data structures must be defined using Zod schemas
 - Schemas define validation rules and TypeScript types
 - Use `.parse()` for runtime validation, `.safeParse()` for error handling
@@ -32,6 +35,7 @@ trigger: always_on
 - Export both schema and inferred TypeScript type: `export const UserSchema = z.object({...}); export type User = z.infer<typeof UserSchema>`
 
 ### Services Layer Rules (`domains/*/services/`)
+
 - Services contain all business logic for the domain
 - Services can read from datasets folder for reference data
 - Services should use repositories and schemas for data validation
@@ -43,6 +47,7 @@ trigger: always_on
 - Load and cache dataset files as needed for business logic
 
 ### Composables Layer Rules (`domains/*/composables/`)
+
 - One main composable per domain (useUser, useProduct, useOrder)
 - Composables are the ONLY way pages can access domain logic
 - Composables should use Vue reactivity (ref, reactive, computed)
@@ -51,6 +56,7 @@ trigger: always_on
 - Composables should not contain business logic
 
 ## Page Rules (`app/pages/`)
+
 - Pages should only orchestrate between domains via composables
 - Pages should not contain business logic
 - Pages should not call services directly
@@ -60,6 +66,7 @@ trigger: always_on
 - Pages should be focused on user experience flow
 
 ## Component Rules (`app/components/`)
+
 - Components should be organized by domain (user/, product/, order/)
 - Components should be pure UI - no business logic
 - Components should receive all data via props
@@ -68,12 +75,14 @@ trigger: always_on
 - UI components (button, input) go in `ui/` folder
 
 ## Shared Rules (`app/shared/`)
+
 - Only put truly shared utilities here
 - No domain-specific logic in shared
 - API clients, common types, utilities only
 - Shared code should not depend on any domain
 
 ## Import Rules
+
 - Pages can only import from: composables, components, shared, schemas
 - Components can only import from: other components, shared, schemas
 - Composables can only import from: services, shared, schemas
@@ -85,6 +94,7 @@ trigger: always_on
 - Datasets are only accessible to services and tests within the same domain
 
 ## File Naming Rules
+
 - Use kebab-case for files: `user-profile.vue`, `product-service.ts`
 - Use PascalCase for Vue components: `UserProfile.vue`
 - Use camelCase for TypeScript files: `userService.ts`
@@ -95,6 +105,7 @@ trigger: always_on
 - Dataset files use descriptive names: `user-roles.json`, `pricing-tiers.csv`
 
 ## Code Organization Rules
+
 - Each domain should be independent - no cross-domain imports
 - If two domains need to communicate, use events or shared services
 - Keep business logic in services, not in composables or pages
@@ -105,6 +116,7 @@ trigger: always_on
 - Validate data at boundaries: API responses, form submissions, external data
 
 ## Forbidden Patterns
+
 - Never import from another domain folder
 - Never put business logic in pages or components
 - Never call repositories from pages or components
@@ -120,6 +132,7 @@ trigger: always_on
 ## Code Philosophy & Standards
 
 ### Clean & Simple Functions
+
 - Write small, focused functions that do one thing well
 - Use descriptive, self-documenting function names
 - Keep functions under 20 lines when possible
@@ -127,6 +140,7 @@ trigger: always_on
 - Use consistent parameter ordering across similar functions
 
 ### Naming Consistency & Efficiency
+
 - Use verbs for functions: `createUser()`, `validateEmail()`, `fetchProducts()`
 - Use nouns for data: `userProfile`, `productList`, `orderStatus`
 - Be consistent across domains: if user has `createUser()`, product should have `createProduct()`
@@ -134,6 +148,7 @@ trigger: always_on
 - Avoid abbreviations: `userRepository` not `userRepo`
 
 ### Business Logic Alignment
+
 - Function names should match business processes
 - Structure code to mirror business workflows
 - Use domain language that stakeholders understand
@@ -141,6 +156,7 @@ trigger: always_on
 - Make business rules explicit and testable
 
 ### UI Component Priority
+
 - Always use Nuxt UI components first: `<UButton>`, `<UInput>`, `<UCard>`, etc.
 - Only use Tailwind CSS for custom styling not covered by Nuxt UI
 - Maintain Nuxt UI design system consistency
@@ -148,6 +164,7 @@ trigger: always_on
 - Follow Nuxt UI theming and configuration patterns
 
 ### Vue 3 State of the Art
+
 - Use Composition API exclusively, no Options API
 - Use `<script setup>` syntax in all Vue components
 - Leverage `defineProps()`, `defineEmits()`, `defineExpose()`
@@ -160,6 +177,7 @@ trigger: always_on
 - Use TypeScript with `<script setup lang="ts">`
 
 ### Testing Philosophy with Vitest
+
 - Use Vitest as the primary testing framework
 - Create tests only when explicitly requested - no automatic test generation
 - Write tests that serve as documentation for humans
@@ -172,6 +190,7 @@ trigger: always_on
 - Keep tests simple and focused on core functionality
 
 ## Recommended Patterns
+
 - Use dependency injection for services in composables
 - Use TypeScript interfaces for contracts between layers
 - Use error handling in services and surface to composables

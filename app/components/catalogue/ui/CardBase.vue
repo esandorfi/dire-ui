@@ -5,8 +5,8 @@
         <h3 class="card-title">{{ title }}</h3>
       </div>
     </slot>
-    <slot/>
-    <slot name="footer"/>
+    <slot />
+    <slot name="footer" />
   </UCard>
 </template>
 
@@ -14,16 +14,16 @@
 defineProps({
   title: {
     type: String,
-    default: ''
+    default: "",
   },
   type: {
     type: String,
-    required: true
+    required: true,
   },
   cardStyle: {
     type: Object,
-    default: () => ({})
-  }
+    default: () => ({}),
+  },
 });
 </script>
 

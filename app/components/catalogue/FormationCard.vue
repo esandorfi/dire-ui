@@ -1,33 +1,45 @@
 <template>
   <CardBase :title="formation.title" type="formation">
     <div class="formation-content">
-      <UBadge color="primary" class="formation-category">{{ formation.category }}</UBadge>
-      
+      <UBadge color="primary" class="formation-category">{{
+        formation.category
+      }}</UBadge>
+
       <p class="formation-introduction">{{ formation.introduction }}</p>
-      
+
       <div class="formation-objectifs">
-        <h4>{{ 'OBJECTIFS' }}</h4>
+        <h4>{{ "OBJECTIFS" }}</h4>
         <ul>
-          <li v-for="(objectif, index) in formation.objectifs" :key="`objectif-${index}`">
+          <li
+            v-for="(objectif, index) in formation.objectifs"
+            :key="`objectif-${index}`"
+          >
             {{ objectif }}
           </li>
         </ul>
       </div>
-      
+
       <div class="formation-programme">
-        <h4>{{ 'PROGRAMME' }}</h4>
-        <div v-for="(section, sIndex) in formation.programSections" :key="`section-${sIndex}`" class="programme-section">
+        <h4>{{ "PROGRAMME" }}</h4>
+        <div
+          v-for="(section, sIndex) in formation.programSections"
+          :key="`section-${sIndex}`"
+          class="programme-section"
+        >
           <h5>{{ section.title }}</h5>
           <ul>
-            <li v-for="(item, iIndex) in section.items" :key="`item-${sIndex}-${iIndex}`">
+            <li
+              v-for="(item, iIndex) in section.items"
+              :key="`item-${sIndex}-${iIndex}`"
+            >
               {{ item }}
             </li>
           </ul>
         </div>
       </div>
-      
+
       <div v-if="formation.publicDescription" class="formation-public">
-        <h4>{{ 'PUBLIC' }}</h4>
+        <h4>{{ "PUBLIC" }}</h4>
         <p>{{ formation.publicDescription }}</p>
       </div>
     </div>
@@ -35,14 +47,14 @@
 </template>
 
 <script setup lang="ts">
-import type { FormationCard } from '../../domains/catalogue/schemas/card.schema';
-import CardBase from './ui/CardBase.vue';
+import type { FormationCard } from "../../domains/catalogue/schemas/card.schema";
+import CardBase from "./ui/CardBase.vue";
 
 defineProps({
   formation: {
     type: Object as () => FormationCard,
-    required: true
-  }
+    required: true,
+  },
 });
 </script>
 

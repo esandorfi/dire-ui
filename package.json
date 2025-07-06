@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare && husky",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
     "test": "vitest",
     "test:run": "vitest run",
     "test:watch": "vitest",
@@ -17,7 +18,10 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "eslint --fix"
+    "*.{js,ts,vue,json,css,md}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.53",
@@ -38,6 +42,7 @@
     "husky": "^9.1.7",
     "jsdom": "^26.1.0",
     "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
   }

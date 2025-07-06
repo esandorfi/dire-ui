@@ -4,36 +4,42 @@
       <div class="legal-text">
         <p>{{ footer.legalText }}</p>
       </div>
-      
+
       <div class="website">
         <p>{{ footer.website }}</p>
       </div>
-      
+
       <div v-if="footer.partners && footer.partners.length" class="partners">
         <h4>Partenaires</h4>
         <div class="partners-list">
-          <span v-for="(partner, index) in footer.partners" :key="`partner-${index}`" class="partner">
+          <span
+            v-for="(partner, index) in footer.partners"
+            :key="`partner-${index}`"
+            class="partner"
+          >
             {{ partner }}
           </span>
         </div>
       </div>
-      
+
       <div v-if="footer.callToAction" class="call-to-action">
-        <button class="btn btn-lg btn-primary">{{ footer.callToAction }}</button>
+        <button class="btn btn-lg btn-primary">
+          {{ footer.callToAction }}
+        </button>
       </div>
     </div>
   </CardBase>
 </template>
 
 <script setup lang="ts">
-import type { FooterCard } from '../../domains/catalogue/schemas/card.schema';
-import CardBase from './ui/CardBase.vue';
+import type { FooterCard } from "../../domains/catalogue/schemas/card.schema";
+import CardBase from "./ui/CardBase.vue";
 
 defineProps({
   footer: {
     type: Object as () => FooterCard,
-    required: true
-  }
+    required: true,
+  },
 });
 </script>
 

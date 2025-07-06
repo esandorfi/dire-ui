@@ -1,7 +1,11 @@
 <template>
   <CardBase :title="details.title" type="details">
     <div class="details-content">
-      <div v-for="(section, index) in details.sections" :key="`section-${index}`" class="details-section">
+      <div
+        v-for="(section, index) in details.sections"
+        :key="`section-${index}`"
+        class="details-section"
+      >
         <h4 class="section-title">{{ section.title }}</h4>
         <p class="section-content">{{ section.content }}</p>
       </div>
@@ -10,14 +14,14 @@
 </template>
 
 <script setup lang="ts">
-import type { DetailsCard } from '../../domains/catalogue/schemas/card.schema';
-import CardBase from './ui/CardBase.vue';
+import type { DetailsCard } from "../../domains/catalogue/schemas/card.schema";
+import CardBase from "./ui/CardBase.vue";
 
 defineProps({
   details: {
     type: Object as () => DetailsCard,
-    required: true
-  }
+    required: true,
+  },
 });
 </script>
 

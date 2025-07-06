@@ -2,7 +2,11 @@
   <CardBase type="philosophy">
     <div class="philosophy-content">
       <div class="philosophy-statements">
-        <p v-for="(statement, index) in philosophy.statements" :key="`statement-${index}`" class="statement">
+        <p
+          v-for="(statement, index) in philosophy.statements"
+          :key="`statement-${index}`"
+          class="statement"
+        >
           {{ statement }}
         </p>
       </div>
@@ -11,15 +15,14 @@
 </template>
 
 <script setup lang="ts">
-import type { PhilosophyCard } from '../../domains/catalogue/schemas/card.schema';
-import CardBase from './ui/CardBase.vue';
-
+import type { PhilosophyCard } from "../../domains/catalogue/schemas/card.schema";
+import CardBase from "./ui/CardBase.vue";
 
 defineProps({
   philosophy: {
     type: Object as () => PhilosophyCard,
-    required: true
-  }
+    required: true,
+  },
 });
 </script>
 

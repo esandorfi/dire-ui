@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 // Section schema for formation programme
 const ProgrammeSectionSchema = z.object({
@@ -26,7 +26,7 @@ const PublicSchema = z.object({
 
 // Formation schema
 export const FormationSchema = z.object({
-  type: z.literal('formation'),
+  type: z.literal("formation"),
   category: z.string(),
   id: z.string(),
   title: z.string(),
