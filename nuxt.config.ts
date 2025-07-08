@@ -17,4 +17,11 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: "2024-11-27",
+
+  fonts: {
+    // Désactiver le téléchargement automatique
+    experimental: {
+      processCSSVariables: true,
+    },
+  },
 });
