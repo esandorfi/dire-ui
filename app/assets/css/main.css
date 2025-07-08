@@ -25,6 +25,18 @@
   border-right: 1px solid var(--border-color);
 }
 
+.section-l {
+  border-left: 1px solid var(--border-color);
+}
+
+.section-r {
+  border-right: 1px solid var(--border-color);
+}
+
+.color-bw-over-color {
+  @apply filter grayscale hover:filter-none transition duration-300;
+}
+
 .waves-bg {
   background:
     linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),

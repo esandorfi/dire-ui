@@ -4,23 +4,125 @@
     <LandingHeroPrimary :formation-cards="formationCards" />
 
     <div class="section-b">
-      <UContainer class="section-lr py-10 relative">
-        <UPageLogos
-          title="Trusted by the best front-end teams"
-          :items="[
-            'i-simple-icons-github',
-            'i-simple-icons-discord',
-            'i-simple-icons-x',
-            'i-simple-icons-instagram',
-            'i-simple-icons-linkedin',
-            'i-simple-icons-facebook',
+      <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
+        <div class="section-number bg-gray-900">01</div>
+        <div class="p-5 sm:p-10">
+          <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
+            Une expertise
+          </p>
+          <p class="text-justify">{{ profileCard?.content }}</p>
+          <p class="mt-2">{{ profileCard?.signature }}</p>
+        </div>
+      </UContainer>
+
+      <UContainer
+        class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0"
+      >
+        <LandingStatBoxes
+          :stats="[
+            { value: '4', label: 'Formations' },
+
+            { value: '20', label: 'Années d\'expérience' },
+            { value: '500+', label: 'Participants formés' },
           ]"
         />
+      </UContainer>
+
+      <UContainer class="section-lr section-b-dashed py-10 relative">
+        <UPageLogos marquee>
+          <ULink to="https://bibliotheques.avignon.fr/">
+            <NuxtImg
+              src="/images/logo-resized/avignon-bibliotheques.jpg"
+              alt="Avignon Bibliotheques"
+              class="color-bw-over-color"
+            />
+          </ULink>
+          <ULink to="https://www.mediatheque-portdebouc.com/">
+            <NuxtImg
+              src="/images/logo-resized/mediatheque-port-de-bouc.png"
+              alt="Mediatheque Port de Bouc"
+              class="color-bw-over-color"
+            />
+          </ULink>
+          <ULink to="https://angladon.com/">
+            <NuxtImg
+              src="/images/logo-resized/musee-angladon.jpg"
+              alt="Musée Angladon"
+              class="color-bw-over-color"
+            />
+          </ULink>
+          <ULink to="https://www.poesieavignon.eu/">
+            <NuxtImg
+              src="/images/logo-resized/centre-europeen-de-poesie-avignon.jpg"
+              alt="Maison de la poésie d'Avignon"
+              class="color-bw-over-color"
+            />
+          </ULink>
+          <ULink to="https://www.festivaloffavignon.com/">
+            <NuxtImg
+              src="/images/logo-resized/festival-avignon-off.png"
+              alt="Festival Avignon Off"
+              class="color-bw-over-color"
+            />
+          </ULink>
+          <ULink to="https://www.education.gouv.fr/">
+            <NuxtImg
+              src="/images/logo-resized/education-nationale.png"
+              alt="Education Nationale"
+              class="color-bw-over-color"
+            />
+          </ULink>
+          <ULink to="https://univ-avignon.fr/">
+            <NuxtImg
+              src="/images/logo-resized/universite-avignon.png"
+              alt="Unversité d'Avignon et des Pays du Vaucluse"
+              class="color-bw-over-color"
+            />
+          </ULink>
+          <ULink to="https://www.cnfpt.fr/">
+            <NuxtImg
+              src="/images/logo-resized/cnfpt.png"
+              alt="CNFPT | Centre National de la Fonction Publique Territoriale"
+              class="color-bw-over-color"
+            />
+          </ULink>
+        </UPageLogos>
+      </UContainer>
+      <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
+        <div class="p-5 sm:p-10">
+          <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
+            Une méthode
+          </p>
+          <p class="text-justify">
+            Provoquer <strong>l'éloquence</strong> dans la sphère publique,
+            c'est conjuguer écoute, efficacité et éthique.<br />
+            <strong>La parole est un outil</strong>, l'un des plus simples et
+            l'un des plus complexes que nous ayons pour communiquer.<br />
+          </p>
+          <p class="text-justify pt-5 max-w-3xl">
+            {{ pedagogieSectionContent }}
+          </p>
+
+          <div class="flex gap-x-4 pt-10 justify-center w-full items-center">
+            <UButton
+              label="Devis sur demande"
+              to="#devis"
+              aria-label="devis"
+              class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
+            />
+            <UButton
+              label="Prendre un rendez-vous"
+              to="/rdv"
+              aria-label="rdv"
+              class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
+            />
+          </div>
+        </div>
       </UContainer>
     </div>
 
     <div class="section-b">
-      <UContainer class="section-lr p-20 relative" />
+      <UContainer class="section-lr p-10 relative" />
     </div>
 
     <div
@@ -28,9 +130,9 @@
       :key="formation.id || idx"
     >
       <div class="section-b">
-        <UContainer class="section-lr section-b-dashed py-10 relative">
+        <UContainer class="section-lr py-10 relative">
           <div class="section-number">
-            {{ String(idx + 1).padStart(2, "0") }}
+            {{ String(idx + 2).padStart(2, "0") }}
           </div>
           <UPageGrid class="lg:grid-cols-2">
             <div class="p-5 sm:p-10">
@@ -132,15 +234,27 @@
             </div>
           </UPageGrid>
         </UContainer>
-        <UContainer class="section-lr section-b py-10 pb-20 relative">
-          <div
-            class="flex gap-x-4 px-5 sm:px-10 justify-center w-full items-center"
-          >
+      </div>
+    </div>
+
+    <div class="section-b">
+      <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
+        <div class="p-5 sm:p-10">
+          <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
+            Modalités des formations
+          </p>
+          <p class="text-justify">
+            Chaque session se déroule en intra-entreprise. Elle dure 2 jours
+            (14h) ou 3 jours (21h), et se déroule dans les locaux de
+            l'entreprise commanditaire. <br />
+          </p>
+
+          <div class="flex gap-x-4 pt-10 justify-center w-full items-center">
             <UButton
               label="Devis sur demande"
               to="#devis"
               aria-label="devis"
-              class="font-bold rounded-full text-base sm:text-xl bg-gray-900 text-white"
+              class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
             />
             <UButton
               label="Prendre un rendez-vous"
@@ -149,22 +263,62 @@
               class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
             />
           </div>
-        </UContainer>
-      </div>
+        </div>
+      </UContainer>
     </div>
+    <div class="section-b">
+      <UContainer class="section-lr relative flex justify-end">
+        <div class="p-5 sm:p-10 sm:pr-40">
+          <p class="uppercase">
+            COMME LES LETTRES DANS<br />
+            LES MOTS NOUS SOMMES<br />
+            DES PETITES PARTS D'UNE<br />PHRASE QUI NE FINIT PAS.
+          </p>
+          <p>Henri Meschonnic</p>
+        </div>
+      </UContainer>
+    </div>
+
+    <UFooter>
+      <template #left>
+        <div class="text-lg sm:text-2xl">
+          dire <span class="text-orange-800">est</span> un art
+        </div>
+      </template>
+
+      <p class="text-muted text-sm">
+        Copyright © {{ new Date().getFullYear() }}
+      </p>
+
+      <template #right>
+        <UButton
+          icon="i-simple-icons-linkedin"
+          color="neutral"
+          variant="ghost"
+          to="https://www.linkedin.com/in/nathalie-pinot-dire-estunart"
+          target="_blank"
+          aria-label="LinkedIn"
+        />
+      </template>
+    </UFooter>
   </div>
 </template>
 
 <script setup lang="ts">
 import NavigationPrimary from "@/components/landing/NavigationPrimary.vue";
-import { onMounted, watch } from "vue";
+import { onMounted } from "vue";
 import { useCatalogue } from "@/domains/catalogue/composables/useCatalogue";
 import LandingHeroPrimary from "@/components/landing/LandingHeroPrimary.vue";
 import { capitalize } from "@/shared/utils/string";
 
 // Use the catalogue composable
-const { loadCatalogue, formationCards, detailsCard, getSectionContent } =
-  useCatalogue();
+const {
+  loadCatalogue,
+  formationCards,
+  detailsCard,
+  getSectionContent,
+  profileCard,
+} = useCatalogue();
 
 onMounted(() => {
   loadCatalogue();
@@ -187,21 +341,7 @@ const publicSectionContent = computed(() => {
   return getSectionContent(detailsCard.value, "public :");
 });
 
-watch(publicSectionContent, (val) => {
-  console.log("publicSectionContent:", val);
+const pedagogieSectionContent = computed(() => {
+  return getSectionContent(detailsCard.value, "la pédagogie :");
 });
-
-watch(
-  detailsCard,
-  (val) => {
-    console.log("detailsCard loaded:", val);
-    if (val && Array.isArray(val.sections)) {
-      console.log(
-        "Sections:",
-        val.sections.map((s) => s.title),
-      );
-    }
-  },
-  { immediate: true },
-);
 </script>

@@ -44,14 +44,14 @@ import type { NavigationMenuItem } from "@nuxt/ui";
 const navitems = ref<NavigationMenuItem[][]>([
   [
     {
+      label: "Nathalie Pinot",
+      to: "#nathalie-pinot",
+    },
+    {
       label: "Formations",
       to: "#top",
     },
 
-    {
-      label: "Nathalie Pinot",
-      to: "#nathalie-pinot",
-    },
     {
       label: "Offre",
       to: "#offre",

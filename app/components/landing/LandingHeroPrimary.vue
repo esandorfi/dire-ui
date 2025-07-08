@@ -3,7 +3,7 @@
     <UPageHero
       class="section-b"
       :ui="{
-        container: 'section-lr py-10 sm:py-16 lg:py-30 waves-bg',
+        container: 'section-lr py-10 sm:py-16 lg:py-20 lg:pt-30 waves-bg',
         title: 'max-w-5xl mx-auto',
         description: 'text-lg/5 sm:text-xl/6 text-gray-900',
         headline: 'text-gray-900 font-bold',
@@ -14,16 +14,14 @@
         enjeu vital.
       </template>
       <template #description>
-        Nathalie Pinot vous propose de travailler la parole dans tous ses états
-        avec la créativité comme moteur de recherche.<br />
-        <strong>La parole est un outil</strong>, l'un des plus simples et l'un
-        des plus complexes que nous ayons pour communiquer. <br />
-        Provoquer <strong>votre éloquence</strong> dans la sphère publique,
-        c'est conjuguer écoute, efficacité et éthique.
+        <strong
+          >Nathalie Pinot vous propose de travailler la parole dans tous ses
+          états avec la créativité comme moteur de recherche.</strong
+        >
       </template>
 
       <template #footer>
-        <UPageGrid class="lg:grid-cols-2">
+        <UPageGrid class="lg:grid-cols-2 sm:px-15">
           <UPageCard
             v-for="(card, index) in heroFormationCards"
             :key="index"
