@@ -1,6 +1,6 @@
 export default defineAppConfig({
   ui: {
-    colorMode: false,
+    // colorMode: false,
     colors: {
       primary: "orange",
       neutral: "gray",

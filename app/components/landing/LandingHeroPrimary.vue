@@ -67,7 +67,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-
+import { capitalize } from "@/shared/utils/string";
 import type { FormationCard } from "@/domains/catalogue/schemas/card.schema";
 const props = defineProps<{ formationCards: FormationCard[] }>();
 
@@ -86,11 +86,6 @@ const heroFormationCards = computed(() =>
 
 // Example: get a specific card by ID (if needed)
 // const someCard = getCardById('your-card-id');
-
-function capitalize(str: string): string {
-  if (!str) return "";
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-}
 
 function getNumber(id: string): string {
   const last = id.split("-").pop();

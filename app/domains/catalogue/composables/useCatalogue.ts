@@ -1,7 +1,7 @@
 import { ref, computed } from "vue";
 import { CatalogueSchema } from "../schemas/catalogue.schema";
 import type { Catalogue } from "../schemas/catalogue.schema";
-import type { CardCollection } from "../schemas/card.schema";
+import type { CardCollection, DetailsCard } from "../schemas/card.schema";
 import { CardTransformerService } from "../services/card-transformer.service";
 
 /**
@@ -108,6 +108,29 @@ export function useCatalogue() {
     () => cards.value.find((card) => card.type === "footer") || null,
   );
 
+  /**
+   * Returns the content of a section in a DetailsCard by section title (case-insensitive).
+   * @param detailsCard The details card object.
+   * @param sectionTitle The title of the section to find (e.g. 'public').
+   * @returns The content string if found, otherwise an empty string.
+   */
+  function getSectionContent(
+    detailsCard: DetailsCard | null | undefined,
+    sectionTitle: string,
+  ): string {
+    if (!detailsCard || !Array.isArray(detailsCard.sections)) return "";
+    const section = detailsCard.sections.find((s) => {
+      console.log(
+        "Comparing",
+        s.title?.toLowerCase(),
+        "with",
+        sectionTitle.toLowerCase(),
+      );
+      return s.title?.toLowerCase() === sectionTitle.toLowerCase();
+    });
+    return section?.content || "";
+  }
+
   return {
     // State
     catalogue,
@@ -119,6 +142,7 @@ export function useCatalogue() {
     loadCatalogue,
     getCardsByType,
     getCardById,
+    getSectionContent,
 
     // Computed properties
     formationCards,

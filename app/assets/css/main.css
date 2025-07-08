@@ -62,8 +62,7 @@
   height: 50px;
   margin: 0;
   font-family:
-    IBM Plex Mono,
-    monospace;
+    /* IBM Plex Mono, */ monospace;
   font-size: 18px;
   font-weight: 600;
   line-height: 23px;
