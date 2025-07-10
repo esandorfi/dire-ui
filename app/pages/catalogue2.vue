@@ -1,12 +1,12 @@
 <template>
-  <div class="catalogue-page">
+  <div class="catalogue-page main-bg">
     <NavigationPrimary />
     <LandingHeroPrimary :formation-cards="formationCards" />
 
     <div class="section-b">
       <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
         <div class="section-number bg-gray-900">01</div>
-        <div class="p-5 sm:p-10">
+        <div class="px-5 sm:px-10">
           <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
             Une expertise
           </p>
@@ -15,20 +15,95 @@
         </div>
       </UContainer>
 
+      <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
+        <div class="section-number bg-gray-900">02</div>
+        <div class="px-5 sm:px-10">
+          <p class="mb-10 text-base/6 sm:text-2xl/6 text-white-600">
+            Les 4 formations
+          </p>
+          <UPageGrid class="lg:grid-cols-2">
+            <UPageCard
+              v-for="(card, index) in heroFormationCards"
+              :key="index"
+              v-bind="card"
+              variant="outline"
+              :to="`#${card.id}`"
+              :ui="{
+                footer: 'text-right text-xs absolute right-2 bottom-2',
+                body: 'w-full',
+                root: 'border-orange-800 px-10',
+                container: 'py-6 sm:py-20',
+              }"
+              spotlight
+              spotlight-color="primary"
+            >
+              <template #title>
+                <div class="text-xs font-bold text-orange-800 pb-2">
+                  FORMATION
+
+                  <span class="text-xs">
+                    {{
+                      card.id == "formation-3-0"
+                        ? "ACTEURS DU LIVRE"
+                        : "COMMUNICATION"
+                    }}
+                  </span>
+                </div>
+                <div class="text-2xl/6 sm:text-4xl/8 font-bold text-gray-900">
+                  {{ capitalize(card.title) }}
+                </div>
+              </template>
+              <template #footer>
+                {{ getNumber(card.id) }}
+              </template>
+            </UPageCard>
+          </UPageGrid>
+        </div>
+      </UContainer>
+
+      <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
+        <div class="section-number bg-gray-900">03</div>
+        <div class="px-5 sm:px-10 flex-col">
+          <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
+            Une méthode
+          </p>
+          <p class="text-justify">
+            Provoquer <strong>l'éloquence</strong> dans la sphère publique,
+            c'est conjuguer écoute, efficacité et éthique.<br />
+            <strong>La parole est un outil</strong>, l'un des plus simples et
+            l'un des plus complexes que nous ayons pour communiquer.<br />
+          </p>
+          <p class="text-justify pt-5">
+            {{ pedagogieSectionContent }}
+          </p>
+
+          <div class="flex gap-x-4 pt-10 justify-center w-full items-center">
+            <UButton
+              label="Devis sur demande"
+              to="#devis"
+              aria-label="devis"
+              class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
+            />
+            <UButton
+              label="Prendre un rendez-vous"
+              to="/rdv"
+              aria-label="rdv"
+              class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
+            />
+          </div>
+        </div>
+      </UContainer>
       <UContainer
-        class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0"
+        class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0 bg-white"
       >
         <LandingStatBoxes
           :stats="[
-            { value: '4', label: 'Formations' },
-
             { value: '20', label: 'Années d\'expérience' },
             { value: '500+', label: 'Participants formés' },
           ]"
         />
       </UContainer>
-
-      <UContainer class="section-lr section-b-dashed py-10 relative">
+      <UContainer class="section-lr py-10 relative bg-white">
         <UPageLogos marquee>
           <ULink to="https://bibliotheques.avignon.fr/">
             <NuxtImg
@@ -88,37 +163,6 @@
           </ULink>
         </UPageLogos>
       </UContainer>
-      <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
-        <div class="p-5 sm:p-10">
-          <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
-            Une méthode
-          </p>
-          <p class="text-justify">
-            Provoquer <strong>l'éloquence</strong> dans la sphère publique,
-            c'est conjuguer écoute, efficacité et éthique.<br />
-            <strong>La parole est un outil</strong>, l'un des plus simples et
-            l'un des plus complexes que nous ayons pour communiquer.<br />
-          </p>
-          <p class="text-justify pt-5 max-w-3xl">
-            {{ pedagogieSectionContent }}
-          </p>
-
-          <div class="flex gap-x-4 pt-10 justify-center w-full items-center">
-            <UButton
-              label="Devis sur demande"
-              to="#devis"
-              aria-label="devis"
-              class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
-            />
-            <UButton
-              label="Prendre un rendez-vous"
-              to="/rdv"
-              aria-label="rdv"
-              class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
-            />
-          </div>
-        </div>
-      </UContainer>
     </div>
 
     <div class="section-b">
@@ -130,12 +174,12 @@
       :key="formation.id || idx"
     >
       <div class="section-b">
-        <UContainer class="section-lr py-10 relative">
-          <div class="section-number">
-            {{ String(idx + 2).padStart(2, "0") }}
+        <UContainer class="section-lr section-b py-10 relative bg-white">
+          <div class="section-number bg-black text-white">
+            {{ String(idx + 4).padStart(2, "0") }}
           </div>
           <UPageGrid class="lg:grid-cols-2">
-            <div class="p-5 sm:p-10">
+            <div class="px-5 sm:px-10">
               <div class="text-xs font-bold text-orange-800 pb-2">
                 FORMATION
 
@@ -234,12 +278,14 @@
             </div>
           </UPageGrid>
         </UContainer>
+        <UContainer class="section-lr p-10 relative" />
       </div>
     </div>
 
     <div class="section-b">
       <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
-        <div class="p-5 sm:p-10">
+        <div class="section-number bg-gray-900">08</div>
+        <div class="px-5 sm:px-10">
           <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
             Modalités des formations
           </p>
@@ -330,6 +376,26 @@ const desiredOrder = [
   "formation-3-1",
   "formation-3-0",
 ];
+
+const heroOrder = [
+  "formation-3-2",
+  "formation-3-3",
+  "formation-3-0",
+  "formation-3-1",
+];
+
+const heroFormationCards = computed(() =>
+  formationCards.value
+    .slice()
+    .sort((a, b) => heroOrder.indexOf(a.id) - heroOrder.indexOf(b.id)),
+);
+
+function getNumber(id: string): string {
+  const last = id.split("-").pop();
+  const num = Number(last);
+  if (isNaN(num)) return "";
+  return String(num + 1).padStart(2, "0");
+}
 
 const orderedFormationCards = computed(() =>
   formationCards.value

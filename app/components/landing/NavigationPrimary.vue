@@ -1,6 +1,6 @@
 <template>
   <div class="section-b">
-    <UContainer class="section-lr">
+    <UContainer class="section-lr bg-white">
       <UHeader
         :toggle="{
           color: 'secondary',
