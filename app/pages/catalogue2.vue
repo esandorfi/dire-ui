@@ -10,13 +10,16 @@
           <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
             Une expertise
           </p>
-          <p class="text-justify">{{ profileCard?.content }}</p>
-          <p class="mt-2">{{ profileCard?.signature }}</p>
+          <p class="text-justify">
+            Provoquer <strong>l'éloquence</strong> dans la sphère publique,
+            c'est conjuguer écoute, efficacité et éthique.<br />
+            <strong>La parole est un outil</strong>, l'un des plus simples et
+            l'un des plus complexes que nous ayons pour communiquer.<br />
+          </p>
         </div>
       </UContainer>
 
-      <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
-        <div class="section-number bg-gray-900">02</div>
+      <UContainer class="section-lr relative bg-gray-900 text-white">
         <div class="px-5 sm:px-10">
           <p class="mb-10 text-base/6 sm:text-2xl/6 text-white-600">
             Les 4 formations
@@ -62,37 +65,48 @@
       </UContainer>
 
       <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
-        <div class="section-number bg-gray-900">03</div>
         <div class="px-5 sm:px-10 flex-col">
           <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
             Une méthode
           </p>
-          <p class="text-justify">
-            Provoquer <strong>l'éloquence</strong> dans la sphère publique,
-            c'est conjuguer écoute, efficacité et éthique.<br />
-            <strong>La parole est un outil</strong>, l'un des plus simples et
-            l'un des plus complexes que nous ayons pour communiquer.<br />
-          </p>
+
           <p class="text-justify pt-5">
             {{ pedagogieSectionContent }}
           </p>
 
-          <div class="flex gap-x-4 pt-10 justify-center w-full items-center">
-            <UButton
-              label="Devis sur demande"
-              to="#devis"
-              aria-label="devis"
-              class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
-            />
+          <div class="flex gap-x-4 pt-15 justify-center w-full items-center">
             <UButton
               label="Prendre un rendez-vous"
               to="/rdv"
               aria-label="rdv"
               class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
             />
+            <UButton
+              label="Devis sur demande"
+              to="#devis"
+              aria-label="devis"
+              class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
+            />
           </div>
         </div>
       </UContainer>
+    </div>
+
+    <div class="section-b">
+      <UContainer class="section-lr p-10 relative" />
+    </div>
+    <div class="section-b">
+      <UContainer class="section-lr p-10 relative bg-white section-b-dashed">
+        <div class="section-number bg-gray-900 text-white">02</div>
+        <div class="px-5 sm:px-10">
+          <p class="mb-5 text-base/6 sm:text-2xl/6 font-bold">
+            Avec Nathalie Pinot
+          </p>
+
+          <p class="text-justify">{{ profileCard?.content }}</p>
+        </div>
+      </UContainer>
+
       <UContainer
         class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0 bg-white"
       >
@@ -176,7 +190,7 @@
       <div class="section-b">
         <UContainer class="section-lr section-b py-10 relative bg-white">
           <div class="section-number bg-black text-white">
-            {{ String(idx + 4).padStart(2, "0") }}
+            {{ String(idx + 3).padStart(2, "0") }}
           </div>
           <UPageGrid class="lg:grid-cols-2">
             <div class="px-5 sm:px-10">
@@ -284,7 +298,7 @@
 
     <div class="section-b">
       <UContainer class="section-lr p-10 relative bg-gray-900 text-white">
-        <div class="section-number bg-gray-900">08</div>
+        <div class="section-number bg-gray-900">07</div>
         <div class="px-5 sm:px-10">
           <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600">
             Modalités des formations
