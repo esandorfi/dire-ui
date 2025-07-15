@@ -60,7 +60,7 @@
             <UFormField name="appointmentRequested">
               <UCheckbox
                 v-model="state.appointmentRequested"
-                label="RDV souhaité"
+                label="Prendre un rendez-vous"
                 help="Cochez si vous souhaitez prendre un rendez-vous"
               />
             </UFormField>

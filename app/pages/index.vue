@@ -324,7 +324,7 @@
         <div class="section-number text-white bg-gray-900">08</div>
         <div class="px-5 sm:px-10">
           <p class="mb-5 text-base/6 sm:text-2xl/6 font-bold">
-            Devis sur demande / Prendre un rendez-vous
+            Prendre un rendez-vous / Devis sur demande
           </p>
           <DemandeRdvForm />
         </div>
