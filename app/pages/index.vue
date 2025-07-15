@@ -16,7 +16,7 @@
               :key="index"
               v-bind="card"
               variant="outline"
-              :to="`#${card.id}`"
+              :to="`#card-${card.id}`"
               :ui="{
                 footer: 'text-right text-xs absolute right-2 bottom-2',
                 body: 'w-full',
@@ -73,31 +73,15 @@
           <p class="text-justify pt-5">
             {{ pedagogieSectionContent }}
           </p>
-
-          <div class="flex gap-x-4 pt-15 justify-center w-full items-center">
-            <UButton
-              label="Prendre un rendez-vous"
-              to="/rdv"
-              aria-label="rdv"
-              class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
-            />
-            <UButton
-              label="Devis sur demande"
-              to="mailto:np@dire-estunart.com?subject=Demande de Devis"
-              aria-label="devis"
-              class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
-            />
-          </div>
         </div>
       </UContainer>
     </div>
 
-    <div class="section-b">
-      <UContainer class="section-lr section-b-dashed p-10 relative" />
-    </div>
     <a name="nathalie-pinot" />
     <div class="section-b">
-      <UContainer class="section-lr p-10 relative bg-white section-b-dashed">
+      <UContainer
+        class="section-lr p-10 relative bg-orange-200 section-b-dashed"
+      >
         <div class="section-number bg-gray-900 text-white">02</div>
 
         <div class="px-5 sm:px-10">
@@ -110,7 +94,7 @@
       </UContainer>
 
       <UContainer
-        class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0 bg-white"
+        class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0 bg-orange-200"
       >
         <LandingStatBoxes
           :stats="[
@@ -120,6 +104,20 @@
         />
       </UContainer>
       <UContainer class="section-lr py-10 relative bg-white">
+        <div class="flex gap-x-4 pt-15 justify-center w-full items-center">
+          <UButton
+            label="Prendre un rendez-vous"
+            to="#rdv"
+            aria-label="rdv"
+            class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
+          />
+          <UButton
+            label="Devis sur demande"
+            to="#rdv"
+            aria-label="devis"
+            class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
+          />
+        </div>
         <UPageLogos marquee>
           <ULink to="https://bibliotheques.avignon.fr/">
             <NuxtImg
@@ -190,6 +188,7 @@
       :key="formation.id || idx"
     >
       <div class="section-b">
+        <a :name="`card-${formation.id}`" />
         <UContainer class="section-lr section-b py-10 relative bg-white">
           <div class="section-number bg-black text-white">
             {{ String(idx + 3).padStart(2, "0") }}
@@ -310,25 +309,28 @@
             Chaque session se déroule en intra-entreprise. Elle dure 2 jours
             (14h) ou 3 jours (21h), et se déroule dans les locaux de
             l'entreprise commanditaire. <br />
+            Un groupe de 2 à 14 participants est requis.<br />
+            Un devis est envoyé sur demande.<br />
+            Les frais de déplacements sont à la charge de l'entreprise
+            commanditaire à partir de Saint-Maixent L'Ecole (79400).
           </p>
-
-          <div class="flex gap-x-4 pt-10 justify-center w-full items-center">
-            <UButton
-              label="Devis sur demande"
-              to="mailto:np@dire-estunart.com?subject=Demande de Devis"
-              aria-label="devis"
-              class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
-            />
-            <UButton
-              label="Prendre un rendez-vous"
-              to="/rdv"
-              aria-label="rdv"
-              class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
-            />
-          </div>
         </div>
       </UContainer>
     </div>
+
+    <div class="section-b">
+      <a name="rdv" />
+      <UContainer class="section-lr p-10 relative bg-orange-200 text-gray-900">
+        <div class="section-number text-white bg-gray-900">08</div>
+        <div class="px-5 sm:px-10">
+          <p class="mb-5 text-base/6 sm:text-2xl/6 font-bold">
+            Devis sur demande / Prendre un rendez-vous
+          </p>
+          <DemandeRdvForm />
+        </div>
+      </UContainer>
+    </div>
+
     <div class="section-b">
       <UContainer class="section-lr relative flex justify-end">
         <div class="p-5 sm:p-10 sm:pr-40">
@@ -364,11 +366,19 @@
         />
       </template>
     </UFooter>
+
+    <p class="text-muted text-sm text-center w-full p-5">
+      NATHALIE PINOT - DIRE EST UN ART, 54 RUE DE LA GRANGE AUX MOINES, 79400 ST
+      MAIXENT L'ECOLE<br />
+      SIRET: 90126767400025, APE : 8559B, ORGANISME DE FORMATION - DA
+      n°75790151879 - TEL : 06.63.96.39.10
+    </p>
   </div>
 </template>
 
 <script setup lang="ts">
 import NavigationPrimary from "@/components/landing/NavigationPrimary.vue";
+import DemandeRdvForm from "@/components/landing/DemandeRdvForm.vue";
 import { onMounted } from "vue";
 import { useCatalogue } from "@/domains/catalogue/composables/useCatalogue";
 import LandingHeroPrimary from "@/components/landing/LandingHeroPrimary.vue";

@@ -20,7 +20,7 @@
         <template #right>
           <UButton
             label="Prendre un rendez-vous"
-            to="mailto:np@dire-estunart.com"
+            to="#rdv"
             aria-label="rdv"
             class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
           />

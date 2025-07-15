@@ -24,4 +24,10 @@ export default defineNuxtConfig({
       processCSSVariables: true,
     },
   },
+
+  runtimeConfig: {
+    public: {
+      formspreeEndpoint: process.env.FORMSPREE_ENDPOINT,
+    },
+  },
 });
