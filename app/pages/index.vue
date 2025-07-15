@@ -18,7 +18,7 @@
               variant="outline"
               :to="`#card-${card.id}`"
               :ui="{
-                footer: 'text-right text-xs absolute right-2 bottom-2',
+                footer: 'text-xs absolute right-0 bottom-5',
                 body: 'w-full',
                 root: 'border-orange-800 px-10',
                 container: 'py-6 sm:py-20',
@@ -440,6 +440,14 @@ const heroFormationCards = computed(() =>
 );
 
 function getNumber(id: string): string {
+  const customMap: Record<string, number> = {
+    "formation-3-2": 3,
+    "formation-3-3": 4,
+    "formation-3-0": 6,
+    "formation-3-1": 5,
+  };
+  if (customMap[id]) return String(customMap[id]).padStart(2, "0");
+
   const last = id.split("-").pop();
   const num = Number(last);
   if (isNaN(num)) return "";
