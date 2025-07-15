@@ -20,7 +20,7 @@
         <template #right>
           <UButton
             label="Prendre un rendez-vous"
-            to="/rdv"
+            to="mailto:np@dire-estunart.com"
             aria-label="rdv"
             class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
           />
@@ -49,12 +49,12 @@ const navitems = ref<NavigationMenuItem[][]>([
     },
     {
       label: "Formations",
-      to: "#top",
+      to: "#formations",
     },
 
     {
-      label: "Offre",
-      to: "#offre",
+      label: "Modalités",
+      to: "#modalites",
     },
   ],
 ]);
