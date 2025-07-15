@@ -5,9 +5,9 @@
 
     <div class="section-b">
       <UContainer
-        class="section-lr section-b-dashed p-10 relative bg-orange-200"
+        class="section-lr section-b-dashed p-10 relative bg-orange-200/30"
       >
-        <div class="section-number bg-gray-900 text-white">01</div>
+        <div class="section-number bg-orange-200/30 text-gray-800">01</div>
 
         <div class="px-5 sm:px-10">
           <UPageGrid class="lg:grid-cols-2">
@@ -51,7 +51,7 @@
       </UContainer>
 
       <UContainer
-        class="section-lr section-b-dashed p-10 relative bg-orange-200"
+        class="section-lr section-b-dashed p-10 relative bg-orange-200/30"
       >
         <div class="px-5 sm:px-10 flex-col">
           <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600 font-bold">
@@ -66,7 +66,7 @@
         </div>
       </UContainer>
 
-      <UContainer class="section-lr p-10 relative bg-orange-200">
+      <UContainer class="section-lr p-10 relative bg-orange-200/30">
         <div class="px-5 sm:px-10 flex-col">
           <p class="text-base/6 sm:text-2xl/6 font-bold">Une méthode</p>
 
@@ -80,9 +80,9 @@
     <a name="nathalie-pinot" />
     <div class="section-b">
       <UContainer
-        class="section-lr p-10 relative bg-orange-200 section-b-dashed"
+        class="section-lr p-10 relative bg-orange-200/60 section-b-dashed"
       >
-        <div class="section-number bg-gray-900 text-white">02</div>
+        <div class="section-number bg-orange-200/60 text-gray-800">02</div>
 
         <div class="px-5 sm:px-10">
           <p class="mb-5 text-base/6 sm:text-2xl/6 font-bold">
@@ -94,17 +94,17 @@
       </UContainer>
 
       <UContainer
-        class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0 bg-orange-200"
+        class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0 bg-orange-200/60"
       >
         <LandingStatBoxes
           :stats="[
             { value: '20', label: 'Années d\'expérience' },
-            { value: '500+', label: 'Participants formés' },
+            { value: '1 500+', label: 'Participants formés' },
           ]"
         />
       </UContainer>
       <UContainer class="section-lr py-10 relative bg-white">
-        <div class="flex gap-x-4 pt-15 justify-center w-full items-center">
+        <div class="flex gap-x-4 justify-center w-full items-center">
           <UButton
             label="Prendre un rendez-vous"
             to="#rdv"
@@ -189,8 +189,10 @@
     >
       <div class="section-b">
         <a :name="`card-${formation.id}`" />
-        <UContainer class="section-lr section-b py-10 relative bg-white">
-          <div class="section-number bg-black text-white">
+        <UContainer
+          class="section-lr section-b py-10 relative bg-orange-200/10"
+        >
+          <div class="section-number bg-orange-200/10 text-gray-800">
             {{ String(idx + 3).padStart(2, "0") }}
           </div>
           <UPageGrid class="lg:grid-cols-2">
@@ -299,8 +301,10 @@
 
     <div class="section-b">
       <a name="modalites" />
-      <UContainer class="section-lr p-10 relative bg-orange-200 text-gray-900">
-        <div class="section-number text-white bg-gray-900">07</div>
+      <UContainer
+        class="section-lr p-10 relative bg-orange-200/40 text-gray-900"
+      >
+        <div class="section-number bg-orange-200/40">07</div>
         <div class="px-5 sm:px-10">
           <p class="mb-5 text-base/6 sm:text-2xl/6 font-bold">
             Modalités des formations
@@ -320,8 +324,10 @@
 
     <div class="section-b">
       <a name="rdv" />
-      <UContainer class="section-lr p-10 relative bg-orange-200 text-gray-900">
-        <div class="section-number text-white bg-gray-900">08</div>
+      <UContainer
+        class="section-lr p-10 relative bg-orange-200/60 text-gray-900"
+      >
+        <div class="section-number bg-orange-200/60">08</div>
         <div class="px-5 sm:px-10">
           <p class="mb-5 text-base/6 sm:text-2xl/6 font-bold">
             Prendre un rendez-vous / Devis sur demande
@@ -334,7 +340,7 @@
     <div class="section-b">
       <UContainer class="section-lr relative flex justify-end">
         <div class="p-5 sm:p-10 sm:pr-40">
-          <p class="uppercase">
+          <p class="uppercase font-bold text-orange-900">
             COMME LES LETTRES DANS<br />
             LES MOTS NOUS SOMMES<br />
             DES PETITES PARTS D'UNE<br />PHRASE QUI NE FINIT PAS.

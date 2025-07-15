@@ -84,8 +84,8 @@
   line-height: 23px;
   display: flex;
 
-  border-bottom: 1px solid #4f4f4f;
-  border-left: 1px solid #4f4f4f;
+  /* border-bottom: 1px solid #4f4f4f;
+  border-left: 1px solid #4f4f4f; */
   position: absolute;
   top: 0;
   left: 0;
