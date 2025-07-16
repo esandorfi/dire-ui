@@ -293,6 +293,12 @@
                     </li>
                   </ul>
                 </div>
+                <UButton
+                  label="Devis sur demande"
+                  to="#rdv"
+                  aria-label="devis"
+                  class="font-bold rounded-full text-lg mt-5"
+                />
               </div>
             </div>
           </UPageGrid>
