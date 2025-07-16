@@ -14,7 +14,7 @@
               v-model="state.name"
               placeholder="Entrez votre nom"
               icon="i-lucide-user"
-              class="w-md"
+              class="w-full sm:w-md"
             />
           </UFormField>
           <UFormField label="Email" name="email" required class="mb-3">
@@ -23,7 +23,7 @@
               type="email"
               placeholder="Entrez votre email"
               icon="i-lucide-mail"
-              class="w-md"
+              class="w-full sm:w-md"
             />
           </UFormField>
 
@@ -33,7 +33,7 @@
               type="tel"
               placeholder="Entrez votre téléphone"
               icon="i-lucide-phone"
-              class="w-md"
+              class="w-full sm:w-md"
             />
           </UFormField>
 
@@ -42,7 +42,7 @@
               v-model="state.company"
               placeholder="Entrez le nom de votre entreprise"
               icon="i-lucide-building"
-              class="w-md"
+              class="w-full sm:w-md"
             />
           </UFormField>
 
@@ -51,7 +51,7 @@
               v-model="state.address"
               placeholder="Entrez votre adresse"
               :rows="1"
-              class="w-md"
+              class="w-full sm:w-md"
             />
           </UFormField>
         </div>
@@ -79,7 +79,7 @@
               v-model="state.message"
               placeholder="Entrez votre message"
               :rows="12"
-              class="w-md"
+              class="w-full sm:w-md"
             />
           </UFormField>
         </div>

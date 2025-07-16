@@ -22,16 +22,27 @@
             label="Prendre un rendez-vous"
             to="#rdv"
             aria-label="rdv"
-            class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
+            class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white hidden sm:block"
           />
         </template>
 
         <template #body>
-          <UNavigationMenu
-            :items="navitems"
-            orientation="vertical"
-            class="-mx-2.5"
-          />
+          <UContainer>
+            <UNavigationMenu
+              :items="navitems"
+              orientation="vertical"
+              class="-mx-2.5"
+              :ui="{
+                link: 'font-bold text-base sm:text-xl',
+              }"
+            />
+            <UButton
+              label="Prendre un rendez-vous"
+              to="#rdv"
+              aria-label="rdv"
+              class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white mt-5"
+            />
+          </UContainer>
         </template>
       </UHeader>
     </UContainer>

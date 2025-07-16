@@ -5,11 +5,11 @@
 
     <div class="section-b">
       <UContainer
-        class="section-lr section-b-dashed p-10 relative bg-orange-200/30"
+        class="section-lr section-b-dashed p-5 sm:p-10 relative bg-orange-200/30"
       >
         <div class="section-number bg-orange-200/30 text-gray-800">01</div>
 
-        <div class="px-5 sm:px-10">
+        <div class="sm:px-10">
           <UPageGrid class="lg:grid-cols-2">
             <UPageCard
               v-for="(card, index) in heroFormationCards"
@@ -20,7 +20,7 @@
               :ui="{
                 footer: 'text-xs absolute right-0 bottom-5',
                 body: 'w-full',
-                root: 'border-orange-800 px-10',
+                root: 'border-orange-800 sm:px-10',
                 container: 'py-6 sm:py-20',
               }"
               spotlight
@@ -43,7 +43,9 @@
                 </div>
               </template>
               <template #footer>
-                {{ getNumber(card.id) }}
+                <div class="hidden sm:block">
+                  {{ getNumber(card.id) }}
+                </div>
               </template>
             </UPageCard>
           </UPageGrid>
@@ -51,10 +53,10 @@
       </UContainer>
 
       <UContainer
-        class="section-lr section-b-dashed p-10 relative bg-orange-200/30"
+        class="section-lr section-b-dashed p-5 sm:p-10 relative bg-orange-200/30"
       >
-        <div class="px-5 sm:px-10 flex-col">
-          <p class="mb-5 text-base/6 sm:text-2xl/6 text-white-600 font-bold">
+        <div class="sm:px-10 flex-col">
+          <p class="mb-5 text-xl/6 sm:text-2xl/6 text-white-600 font-bold">
             Une expertise
           </p>
           <p class="text-justify">
@@ -66,9 +68,9 @@
         </div>
       </UContainer>
 
-      <UContainer class="section-lr p-10 relative bg-orange-200/30">
-        <div class="px-5 sm:px-10 flex-col">
-          <p class="text-base/6 sm:text-2xl/6 font-bold">Une méthode</p>
+      <UContainer class="section-lr p-5 sm:p-10 relative bg-orange-200/30">
+        <div class="sm:px-10 flex-col">
+          <p class="text-xl/6 sm:text-2xl/6 font-bold">Une méthode</p>
 
           <p class="text-justify pt-5">
             {{ pedagogieSectionContent }}
@@ -80,12 +82,12 @@
     <a name="nathalie-pinot" />
     <div class="section-b">
       <UContainer
-        class="section-lr p-10 relative bg-orange-200/60 section-b-dashed"
+        class="section-lr p-5 sm:p-10 relative bg-orange-200/60 section-b-dashed"
       >
         <div class="section-number bg-orange-200/60 text-gray-800">02</div>
 
-        <div class="px-5 sm:px-10">
-          <p class="mb-5 text-base/6 sm:text-2xl/6 font-bold">
+        <div class="sm:px-10">
+          <p class="mb-5 text-xl/6 sm:text-2xl/6 font-bold">
             Avec Nathalie Pinot
           </p>
 
@@ -115,7 +117,7 @@
             label="Devis sur demande"
             to="#rdv"
             aria-label="devis"
-            class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900"
+            class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900 hidden sm:block"
           />
         </div>
         <UPageLogos marquee>
@@ -196,7 +198,7 @@
             {{ String(idx + 3).padStart(2, "0") }}
           </div>
           <UPageGrid class="lg:grid-cols-2">
-            <div class="px-5 sm:px-10">
+            <div class="sm:px-10">
               <div class="text-xs font-bold text-orange-800 pb-2">
                 FORMATION
 
@@ -255,7 +257,7 @@
                 </div>
               </div>
             </div>
-            <div class="pt-5 sm:pt-10">
+            <div class="sm:pt-10">
               <div
                 v-if="formation.objectifs && formation.objectifs.length"
                 class="mb-2"
@@ -302,11 +304,11 @@
     <div class="section-b">
       <a name="modalites" />
       <UContainer
-        class="section-lr p-10 relative bg-orange-200/40 text-gray-900"
+        class="section-lr p-5 sm:p-10 relative bg-orange-200/40 text-gray-900"
       >
         <div class="section-number bg-orange-200/40">07</div>
-        <div class="px-5 sm:px-10">
-          <p class="mb-5 text-base/6 sm:text-2xl/6 font-bold">
+        <div class="sm:px-10">
+          <p class="mb-5 text-lg/6 sm:text-2xl/6 font-bold">
             Modalités des formations
           </p>
           <p class="text-justify">
@@ -325,11 +327,11 @@
     <div class="section-b">
       <a name="rdv" />
       <UContainer
-        class="section-lr p-10 relative bg-orange-200/60 text-gray-900"
+        class="section-lr p-5 sm:p-10 relative bg-orange-200/60 text-gray-900"
       >
         <div class="section-number bg-orange-200/60">08</div>
-        <div class="px-5 sm:px-10">
-          <p class="mb-5 text-base/6 sm:text-2xl/6 font-bold">
+        <div class="sm:px-10">
+          <p class="mb-5 text-lg/6 sm:text-2xl/6 font-bold">
             Prendre un rendez-vous / Devis sur demande
           </p>
           <DemandeRdvForm />
