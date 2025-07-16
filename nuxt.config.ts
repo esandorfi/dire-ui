@@ -11,7 +11,9 @@ export default defineNuxtConfig({
   ],
 
   css: ["~/assets/css/main.css"],
-
+  ui: {
+    colorMode: false,
+  },
   future: {
     compatibilityVersion: 4,
   },
