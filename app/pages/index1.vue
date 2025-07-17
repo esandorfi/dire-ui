@@ -1,11 +1,15 @@
 <template>
   <div class="catalogue-page main-bg">
     <NavigationPrimary />
+    <LandingHeroPrimary :formation-cards="formationCards" />
 
-    <div class="section-b waves-bg">
-      <LandingHeroPrimary :formation-cards="formationCards" />
-      <UContainer class="section-lr section-b-dashed p-5 sm:p-10 relative">
-        <div class="sm:p-10">
+    <div class="section-b">
+      <UContainer
+        class="section-lr section-b-dashed p-5 sm:p-10 relative bg-orange-200/30"
+      >
+        <div class="section-number bg-orange-200/30 text-gray-800">01</div>
+
+        <div class="sm:px-10">
           <UPageGrid class="lg:grid-cols-2">
             <UPageCard
               v-for="(card, index) in heroFormationCards"
@@ -16,14 +20,14 @@
               :ui="{
                 footer: 'text-xs absolute right-0 bottom-5',
                 body: 'w-full',
-                root: 'border-orange-800 border-2 rounded-lg sm:px-10',
+                root: 'border-orange-800 sm:px-10',
                 container: 'py-6 sm:py-20',
               }"
               spotlight
               spotlight-color="primary"
             >
               <template #title>
-                <div class="text-xs font-bold text-orange-800 pb-2 sm:pb-5">
+                <div class="text-xs font-bold text-orange-800 pb-2">
                   FORMATION
 
                   <span class="text-xs">
@@ -45,24 +49,12 @@
               </template>
             </UPageCard>
           </UPageGrid>
-
-          <div
-            class="flex gap-x-4 pt-5 sm:pt-20 justify-center w-full items-center"
-          >
-            <UButton
-              label="Organisez votre formation"
-              to="#rdv"
-              aria-label="rdv"
-              class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
-            />
-          </div>
         </div>
       </UContainer>
 
       <UContainer
         class="section-lr section-b-dashed p-5 sm:p-10 relative bg-orange-200/30"
       >
-        <div class="section-number bg-orange-200/30 text-gray-800">01</div>
         <div class="sm:px-10 flex-col">
           <p class="mb-5 text-xl/6 sm:text-2xl/6 text-white-600 font-bold">
             Une expertise
@@ -90,21 +82,21 @@
     <a name="nathalie-pinot" />
     <div class="section-b">
       <UContainer
-        class="section-lr p-5 sm:p-10 relative section-b-dashed np-bg"
+        class="section-lr p-5 sm:p-10 relative bg-orange-200/60 section-b-dashed"
       >
-        <div class="section-number text-gray-800">02</div>
+        <div class="section-number bg-orange-200/60 text-gray-800">02</div>
 
         <div class="sm:px-10">
-          <p class="mb-5 text-xl/6 sm:text-2xl/6 font-bold">Nathalie Pinot</p>
-
-          <p class="text-justify font-bold sm:max-w-3xl">
-            {{ profileCard?.content }}
+          <p class="mb-5 text-xl/6 sm:text-2xl/6 font-bold">
+            Avec Nathalie Pinot
           </p>
+
+          <p class="text-justify">{{ profileCard?.content }}</p>
         </div>
       </UContainer>
 
       <UContainer
-        class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0"
+        class="section-lr section-b-dashed relative px-0 sm:px-0 lg:px-0 bg-orange-200/60"
       >
         <LandingStatBoxes
           :stats="[
@@ -113,8 +105,22 @@
           ]"
         />
       </UContainer>
-      <UContainer class="section-lr relative bg-white pb-5">
-        <UPageLogos marquee class="bg-white">
+      <UContainer class="section-lr py-10 relative bg-white">
+        <div class="flex gap-x-4 justify-center w-full items-center">
+          <UButton
+            label="Prendre un rendez-vous"
+            to="#rdv"
+            aria-label="rdv"
+            class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white"
+          />
+          <UButton
+            label="Devis sur demande"
+            to="#rdv"
+            aria-label="devis"
+            class="font-bold rounded-full text-base sm:text-xl bg-white text-gray-900 hidden sm:block"
+          />
+        </div>
+        <UPageLogos marquee>
           <ULink to="https://bibliotheques.avignon.fr/">
             <NuxtImg
               src="/images/logo-resized/avignon-bibliotheques.jpg"
@@ -331,11 +337,9 @@
       >
         <div class="section-number bg-orange-200/60">08</div>
         <div class="sm:px-10">
-          <div class="flex-col sm:flex-row mb-5">
-            <p class="text-lg/6 sm:text-2xl/6 font-bold">
-              Contactez-nous par internet / par tél 06.63.96.39.10
-            </p>
-          </div>
+          <p class="mb-5 text-lg/6 sm:text-2xl/6 font-bold">
+            Prendre un rendez-vous / Devis sur demande
+          </p>
           <DemandeRdvForm />
         </div>
       </UContainer>
@@ -391,7 +395,7 @@ import NavigationPrimary from "@/components/landing/NavigationPrimary.vue";
 import DemandeRdvForm from "@/components/landing/DemandeRdvForm.vue";
 import { onMounted } from "vue";
 import { useCatalogue } from "@/domains/catalogue/composables/useCatalogue";
-import LandingHeroPrimary from "@/components/landing/LandingHeroPrimary.vue";
+import LandingHeroPrimary from "@/components/landing/LandingHeroPrimary1.vue";
 import { capitalize } from "@/shared/utils/string";
 
 useHead({

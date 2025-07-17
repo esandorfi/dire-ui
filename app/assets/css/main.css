@@ -65,6 +65,19 @@
   }
 }
 
+@media (min-width: 640px) {
+  .np-bg {
+    background:
+      /* linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), */
+      /* Adjust the alpha value (0.5) to change the intensity */ url("/images/np-portrait.png");
+    /* background-image: url('/images/waves-bg.jpg'); */
+    background-size: contain;
+    background-position: right 10% bottom;
+    /* center; */
+    background-repeat: no-repeat;
+  }
+}
+
 /* Section Number */
 .section-number {
   text-align: center;

@@ -3,9 +3,9 @@
     <UPageHero
       class="section-b"
       :ui="{
-        container: 'section-lr py-10 sm:py-16 lg:pb-16 lg:pt-50',
+        container: 'section-lr py-10 sm:py-16 lg:py-20 lg:py-50 waves-bg',
         title: 'max-w-4xl mx-auto',
-        description: 'max-w-5xl text-lg/5 sm:text-xl/6 text-gray-900',
+        description: 'max-w-5xl text-lg/5 sm:text-xl/6 text-gray-900 sm:pt-10',
         headline: 'text-gray-900 font-bold',
       }"
     >
@@ -14,12 +14,10 @@
         enjeu vital.
       </template>
       <template #description>
-        <div class="rounded-full bg-white/40 sm:p-5">
-          <strong
-            >Nathalie Pinot vous propose de travailler la parole dans tous ses
-            états avec la créativité comme moteur de recherche.</strong
-          >
-        </div>
+        <strong
+          >Nathalie Pinot vous propose de travailler la parole dans tous ses
+          états avec la créativité comme moteur de recherche.</strong
+        >
       </template>
     </UPageHero>
   </div>
