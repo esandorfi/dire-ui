@@ -44,7 +44,7 @@
           "category": "FORMATION",
           "id": "le_livre_en_scene",
           "title": "LE LIVRE EN SCÈNE",
-          "introduction": "Lire à haute voix c'est faire entendre la littérature et partager un moment d'intimité avec un public. Comment se mouvoir dans la matière des mots d'un auteur, articuler, laisser résonner tout en engageant le corps du lecteur dans un espace scénique.",
+          "introduction": "Lire à haute voix c'est faire entendre la littérature et partager un moment d'intimité avec un public. C'est se mouvoir dans la matière des mots d'un auteur, laisser résonner tout en engageant le corps du lecteur dans un espace scénique.",
           "objectifs": {
             "title": "OBJECTIFS",
             "items": [
@@ -60,7 +60,7 @@
                 "items": [
                   "Travail sur la respiration, l'utilisation de la voix, la diction, le regard, l'écoute et la présence",
                   "Travailler la résonance des mots et les déplacements",
-                  "La posture du lecteur : devant un pupitre, assis, texte en main, en chœur…"
+                  "La posture du lecteur : devant un pupitre, assis, texte en main, en choeur…"
                 ]
               },
               {
@@ -70,7 +70,7 @@
                   "Le souffle d'une écriture : son rythme, ses silences...",
                   "Le rôle de l'imaginaire dans une lecture",
                   "Comment écouter un auteur et faire des choix dans ce que l'on souhaite transmettre du texte",
-                  "Mises en situation en solo, en duo et en chœur"
+                  "Mises en situation en solo, en duo et en choeur"
                 ]
               },
               {
@@ -92,13 +92,13 @@
           "type": "formation",
           "category": "FORMATION",
           "id": "ecrire_pour_dire",
-          "title": "ÉCRIRE POUR DIRE",
-          "introduction": "Ecrire est un processus en mouvement. Un discours improvisé a été réécrit trois fois nous dit Winston Churchill. Elaborer un texte ayant pour vocation d'être dit est un véritable exercice d'équilibre qui permet de gagner en aisance et en clarté.",
+          "title": "DE L'ÉCRITURE À L'ORALITÉ",
+          "introduction": "Elaborer un texte ayant pour vocation d'être dit est un véritable exercice d'équilibre qui permet de gagner aisance, clarté, pertinence et concision. Comment mettre le mouvement d'une pensée dans une écriture ?",
           "objectifs": {
             "title": "OBJECTIFS",
             "items": [
               "Ecrire pour clarifier et architecturer des pensées autour d'un sujet ou d'une thématique",
-              "Construire et animer une présentation orale pour provoquer l'interactivité de son public"
+              "Construire et animer une présentation orale pour provoquer l'intéractivité de son public"
             ]
           },
           "programme": {
@@ -123,7 +123,7 @@
                 ]
               },
               {
-                "title": "Dire un discours avec éloquence face à un public",
+                "title": "Dire un texte avec éloquence face à un public",
                 "items": [
                   "Donner sa parole avec naturel, clarté et plaisir en provoquant l'adhésion et l'intéraction de son public"
                 ]
@@ -161,7 +161,7 @@
                   "Jouer avec les émotions pour nourrir sa parole",
                   "Comment être en relation avec soi et avec l'autre",
                   "S'engager physiquement et mentalement pour donner un rythme aux mots et convoquer l'imaginaire",
-                  "Adapter l'expressivité, la gestuelle et les tonalités de sa voix pour capter l'attention de son auditeur et de son auditoire"
+                  "Adapter l'expressivité, la gestuelle et les tonalités de sa voix pour capter l'attention de son auditeur et/ou de son auditoire"
                 ]
               },
               {
@@ -194,25 +194,27 @@
               {
                 "title": "Faire un diagnostic des situations managériales",
                 "items": [
-                  "Identifier et analyser les situations de communication du manager et les difficultés rencontrées",
-                  "Ajuster la communication sur son projet et sa vision",
+                  "Identifier et analyser les situations de communication du manager et les difficultés rencontrées"
+                ]
+              },
+              {
+                "title": "Ajuster la communication sur son projet et sa vision",
+                "items": [
                   "Tirer profit des différentes facettes de sa personnalité",
-                  "Améliorer ses axes de communication et clarifier son identité managériale",
-                  "Maîtriser les techniques d'écoute et de reformulation"
+                  "Améliorer ses axes de communication et clarifier son identité managériale"
                 ]
               },
               {
                 "title": "Renforcer ses qualités de communicant",
                 "items": [
                   "Connaître les stratégies de résolution des conflits et favoriser l'approche collaborative",
-                  "Construire un positionnement et un discours impactant et différenciant"
+                  "Construire un positionnement et un discours impactants et différenciants"
                 ]
               },
               {
                 "title": "Construire des relations sereines et constructives",
                 "items": [
                   "Respecter le cadre professionnel et l'enjeu social",
-                  "Conjuguer performance et bien-être dans sa vie professionnelle",
                   "Considérer la spirale évolutive du temps pour piloter un changement de façon pérenne"
                 ]
               }

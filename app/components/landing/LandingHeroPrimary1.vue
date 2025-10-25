@@ -10,7 +10,7 @@
       }"
     >
       <template #title>
-        Aujourd'hui, <i class="text-orange-900">l'art de s'exprimer</i> est un
+        Aujourd'hui, <i class="text-orange-500">l'art de s'exprimer</i> est un
         enjeu vital.
       </template>
       <template #description>

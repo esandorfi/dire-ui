@@ -348,7 +348,7 @@
     <div class="section-b">
       <UContainer class="section-lr relative flex justify-end">
         <div class="p-5 sm:p-10 sm:pr-40">
-          <p class="uppercase font-bold text-orange-900">
+          <p class="uppercase font-bold text-orange-500">
             COMME LES LETTRES DANS<br />
             LES MOTS NOUS SOMMES<br />
             DES PETITES PARTS D'UNE<br />PHRASE QUI NE FINIT PAS.

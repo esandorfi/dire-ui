@@ -11,7 +11,7 @@
       >
         <template #title>
           <div class="text-lg sm:text-2xl">
-            dire <span class="text-orange-800">est</span> un art
+            dire <span class="text-orange-500">est</span> un art
           </div>
         </template>
 
@@ -22,7 +22,7 @@
             label="Prendre un rendez-vous"
             to="#rdv"
             aria-label="rdv"
-            class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white hidden sm:block"
+            class="font-bold rounded-full text-base sm:text-xl bg-orange-500 text-white hidden sm:block"
           />
         </template>
 
@@ -40,7 +40,7 @@
               label="Prendre un rendez-vous"
               to="#rdv"
               aria-label="rdv"
-              class="font-bold rounded-full text-base sm:text-xl bg-orange-800 text-white mt-5"
+              class="font-bold rounded-full text-base sm:text-xl bg-orange-500 text-white mt-5"
             />
           </UContainer>
         </template>
